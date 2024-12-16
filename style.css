@@ -1,0 +1,16 @@
+/*
+Theme Name: Storefront Child
+Theme URI: http://example.com/storefront-child/
+Description: Tema hijo de Storefront
+Author: Tu Nombre
+Author URI: http://example.com
+Template: storefront
+Version: 1.0.0
+*/
+
+/* Importar los estilos del tema principal */
+@import url("../storefront/style.css");
+
+#page header.site-header {
+    background-color: #B7816B;
+}

@@ -1,0 +1,8 @@
+# Archivos de WordPress que no necesito incluir
+wp-config.php
+.htaccess
+wp-content/uploads/
+wp-content/cache/
+node_modules/
+*.log
+*.sql
