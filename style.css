@@ -28,6 +28,29 @@ Version: 1.0.0
     display: none !important;
 }
 
+.site-branding {
+    display: none !important;
+}
+
+/* Ocultar solo el texto del botón de menú móvil */
+.menu-toggle span, .mobile-menu-button span {
+    display: none; /* Oculta el texto */
+}
+
+button.menu-toggle {
+    border: none; 
+    background-color: transparent;
+}
+
+/* Previene que el fondo se vuelva blanco al pasar el ratón (hover) */
+button.menu-toggle:hover {
+    background-color: transparent !important; /* Fondo transparente al hacer hover */
+}
+
+/* Elimina el borde de enfoque al hacer clic (focus) */
+button.menu-toggle:focus {
+    outline: none !important; /* Elimina el borde de enfoque */
+}
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - APPLIED IN ALL PAGES */
