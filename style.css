@@ -2,15 +2,64 @@
 Theme Name: Storefront Child
 Theme URI: http://example.com/storefront-child/
 Description: Tema hijo de Storefront
-Author: Tu Nombre
+Author: iledysile
 Author URI: http://example.com
 Template: storefront
 Version: 1.0.0
 */
 
+
 /* Importar los estilos del tema principal */
 @import url("../storefront/style.css");
 
-#page header.site-header {
-    background-color: #B7816B;
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - APPLIED IN ALL PAGES */
+/*---------------------------------------*/
+/*---------------------------------------*/
+.site-header {
+    background-color: transparent !important; /* Fondo transparente */
+    position: absolute; /* Posición para superponerse sobre el fondo */
+    width: 100%; /* Asegúrate de que cubra todo el ancho */
+    z-index: 10; /* Asegura que la cabecera esté sobre el fondo */
 }
+
+.site-search {
+    display: none !important;
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END - APPLIED IN ALL PAGES */
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+/*------------------------------------------------------------------------------*/
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - APPLIED IN HOME PAGE*/
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+.home #content .col-full {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* Imagen a pantalla completa solo en la página de inicio */
+.home .fullscreen-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    background-position: center top; /* Evita que se le corte la cabeza en pantallas muy anchas */
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END - APPLIED IN HOME PAGE*/
+/*---------------------------------------*/
+/*---------------------------------------*/
