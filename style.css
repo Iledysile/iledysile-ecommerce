@@ -17,6 +17,12 @@ Version: 1.0.0
 /* INIT - APPLIED IN ALL PAGES */
 /*---------------------------------------*/
 /*---------------------------------------*/
+
+/* Fija el menú en la parte superior */
+#site-navigation .primary-navigation {
+    position: fixed; 
+}
+
 .site-header {
     background-color: transparent !important; /* Fondo transparente */
     position: absolute; /* Posición para superponerse sobre el fondo */
@@ -50,6 +56,11 @@ button.menu-toggle:hover {
 /* Elimina el borde de enfoque al hacer clic (focus) */
 button.menu-toggle:focus {
     outline: none !important; /* Elimina el borde de enfoque */
+}
+
+/* Oculta completamente la barra de acceso rápido del footer en moviles */
+.storefront-handheld-footer-bar {
+    display: none !important; 
 }
 /*---------------------------------------*/
 /*---------------------------------------*/
