@@ -24,6 +24,45 @@ Version: 1.0.0
     position: fixed;
 }
 
+/* Fija el botón mobile del menú en la parte superior */
+#site-navigation-menu-toggle {
+    position: fixed;
+    right: 10px;
+}
+
+nav#site-navigation {
+    position: fixed;
+    width: 90%;
+}
+
+ul#menu-menuv {
+    margin-top: 38px;
+    background-color: #ffffffe0;
+    padding: 2px;
+}
+
+.handheld-navigation ul.menu li {
+    position: relative;
+    background-color: #bbb1cfb3;
+    padding-left: 20px;
+    margin: 5px;
+}
+
+.handheld-navigation li.current-menu-item {
+    background-color: #edededb3 !important;
+    border-bottom: 1px solid #eeb6ff;
+    text-decoration: overline;
+}
+
+ul.menu li.current-menu-item > a {
+    color: #b7816b;
+}
+
+#menu-menuv li a:focus {
+    outline: none; /* Elimina el borde */
+    box-shadow: none; /* Elimina sombras adicionales */
+}
+
 .site-header {
     background-color: transparent !important; /* Fondo transparente */
     position: absolute; /* Posición para superponerse sobre el fondo */
@@ -63,6 +102,12 @@ button.menu-toggle:focus {
 .storefront-handheld-footer-bar {
     display: none !important; 
 }
+
+.woocommerce-Price-amount {
+    display: none !important; 
+}
+
+
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - APPLIED IN ALL PAGES */
