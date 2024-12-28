@@ -18,9 +18,10 @@ Version: 1.0.0
 /*---------------------------------------*/
 /*---------------------------------------*/
 
+
 /* Fija el menú en la parte superior */
 #site-navigation .primary-navigation {
-    position: fixed; 
+    position: fixed;
 }
 
 .site-header {
