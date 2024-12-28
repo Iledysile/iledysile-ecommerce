@@ -17,8 +17,11 @@ Version: 1.0.0
 /* INIT - APPLIED IN ALL PAGES */
 /*---------------------------------------*/
 /*---------------------------------------*/
-#site-navigation {
-    position: fixed; /* Fija el menú en la parte superior */
+
+
+/* Fija el menú en la parte superior */
+#site-navigation .primary-navigation {
+    position: fixed;
 }
 
 .site-header {
