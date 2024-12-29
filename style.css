@@ -18,16 +18,33 @@ Version: 1.0.0
 /*---------------------------------------*/
 /*---------------------------------------*/
 
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h2, h3 {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.1em;
+}
 
 /* Fija el menú en la parte superior */
-#site-navigation .primary-navigation {
+.storefront-primary-navigation {
     position: fixed;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Estado con scroll: Fondo blanco */
+.storefront-primary-navigation.scrolled {
+    background-color: rgba(255, 255, 255, 1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Fija el botón mobile del menú en la parte superior */
-#site-navigation-menu-toggle {
+button#site-navigation-menu-toggle {
     position: fixed;
     right: 10px;
+    margin-top: 20px;
 }
 
 nav#site-navigation {
@@ -68,6 +85,7 @@ ul.menu li.current-menu-item > a {
     position: absolute; /* Posición para superponerse sobre el fondo */
     width: 100%; /* Asegúrate de que cubra todo el ancho */
     z-index: 10; /* Asegura que la cabecera esté sobre el fondo */
+    padding-top: 0;
 }
 
 .site-search {
@@ -103,8 +121,17 @@ button.menu-toggle:focus {
     display: none !important; 
 }
 
+/* Oculta el precio que lleva acumulado el carrito en el menuH */
 .woocommerce-Price-amount {
     display: none !important; 
+}
+
+div#primary.content-area {
+    margin-bottom: 0;
+}
+
+.edit-link {
+    display: none;
 }
 
 
@@ -138,6 +165,41 @@ button.menu-toggle:focus {
     background-position: center top; /* Evita que se le corte la cabeza en pantallas muy anchas */
 }
 
+.home .wp-block-nk-awb {
+    padding: 0 !important; 
+    margin: 0 !important;  
+}
+
+.home .wp-block-columns.has-background {
+    padding: 0;
+}
+
+.home .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow{
+    margin: 0 !important;  
+}
+
+/* Aplica sombra solo en h2 y h3 de la home */
+.home h2, 
+.home h3 {
+  text-shadow: 2px 2px 5px rgb(255 255 255 / 45%); 
+}
+
+.home .site-main {
+    margin-bottom: 0 !important;
+}
+
+@media (min-width: 600px) {
+    .home .hentry .entry-content .wp-block-columns .wp-block-column, .editor-styles-wrapper .wp-block-columns .wp-block-column {
+        padding: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 780px) and (max-width: 900px) {
+  .home h2, .home h3 {
+    font-size: 0.9rem !important; /* Tamaño de fuente más pequeño para pantallas entre 780px y 900px */
+  }
+}
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - APPLIED IN HOME PAGE*/
