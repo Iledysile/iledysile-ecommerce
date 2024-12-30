@@ -27,6 +27,10 @@ h2, h3 {
   letter-spacing: 0.1em;
 }
 
+body:not(.home) .site-content {
+    margin-top: 6em; /* Relativo al tamaño de fuente */
+}
+
 /* Fija el menú en la parte superior */
 .storefront-primary-navigation {
     position: fixed;
@@ -36,8 +40,8 @@ h2, h3 {
 
 /* Estado con scroll: Fondo blanco */
 .storefront-primary-navigation.scrolled {
-    background-color: rgba(255, 255, 255, 1); 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1) !important; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important; 
 }
 
 /* Fija el botón mobile del menú en la parte superior */
@@ -71,8 +75,35 @@ ul#menu-menuv {
     text-decoration: overline;
 }
 
-ul.menu li.current-menu-item > a {
-    color: #b7816b;
+.primary-navigation li.current-menu-item > a {
+    color: #b7816b !important; /* Color de la letra de la opción activa del menú web */
+    text-decoration: overline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: from-font;
+    text-decoration-color: #b7816b;
+}
+
+.primary-navigation .sub-menu {
+    background-color: transparent !important;
+}
+
+.primary-navigation .sub-menu.scrolled {
+    background-color: rgba(255, 255, 255, 1) !important; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important; 
+}
+
+.primary-navigation .sub-menu > li {
+    border-bottom: 1px solid #8080804a !important; /* Especifica el color si es necesario */
+    background-color: rgba(0, 0, 0, 0.025) !important;
+}
+
+#menu-menuh li a:hover {
+    color: black;
+    background-color: #d7a5ff0f;
+}
+
+.handheld-navigation li.current-menu-item > a {
+    color: #b7816b; /* Color de la letra de la opción activa del menú mobile */
 }
 
 #menu-menuv li a:focus {
@@ -132,6 +163,16 @@ div#primary.content-area {
 
 .edit-link {
     display: none;
+}
+
+/* Ocultar breadcrumb de momento, cuando tengamos muchas categorías
+o productos se restaurará y se maquetará correctamente */
+.storefront-breadcrumb {
+    display: none;
+}
+
+.menu-item-has-children > a::after {
+    display: none !important;
 }
 
 
