@@ -24,3 +24,20 @@ function enqueue_custom_scripts() {
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+//Optimizar carga de fuentes de google fonts
+function add_google_fonts_preconnect() {
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+}
+add_action('wp_head', 'add_google_fonts_preconnect');
+
+function add_google_fonts() {
+    wp_enqueue_style(
+        'google-fonts',
+        'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap',
+        array(),
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'add_google_fonts');

@@ -19,12 +19,13 @@ Version: 1.0.0
 /*---------------------------------------*/
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+    font-family: "Montserrat", serif;
+    font-weight: 300;
 }
 
 h2, h3 {
-  font-family: 'Courier New', Courier, monospace;
-  letter-spacing: 0.1em;
+    font-family: "Montserrat", serif;
+    letter-spacing: 0.1em;
 }
 
 body:not(.home) .site-content {
