@@ -41,3 +41,38 @@ function add_google_fonts() {
     );
 }
 add_action('wp_enqueue_scripts', 'add_google_fonts');
+
+function iledysile_add_mobile_menu() {
+    ?>
+    <!-- Menú lateral -->
+    <div id="iledysile-mobile-menu-overlay" class="iledysile-menu-overlay"></div>
+    <div id="iledysile-mobile-menu" class="iledysile-mobile-menu">
+        <!--<div class="iledysile-mobile-menu-header">
+            <div class="iledysile-logo">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo Iledysile">
+                </a>
+            </div>
+        </div>-->
+        <nav class="iledysile-mobile-menu-items">
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'iledysile-mobile-menu', // Ubicación del menú
+                    'menu_class'     => 'iledysile-menu', // Clase CSS
+                    'container'      => false, // Sin contenedor adicional
+                )
+            );
+            ?>
+        </nav>
+    </div>
+
+    <!-- Botón de abrir/cerrar -->
+    <button class="meatball">
+        <span class="dot"> </span>
+        <span class="dot"> </span>
+        <span class="dot"> </span>
+    </button>
+    <?php
+}
+add_action('storefront_before_site', 'iledysile_add_mobile_menu');
