@@ -1,0 +1,243 @@
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - SLIDING MOBILE MENU */
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+#iledysile-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* El menú está oculto fuera de la pantalla */
+    width: 300px; /* Ancho del menú */
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    transition: left 0.3s ease; /* Animación suave al abrir y cerrar */
+}
+
+/* Estilos para el overlay (fondo semitransparente) */
+#iledysile-mobile-menu-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    z-index: 9998;
+}
+
+/* Mostrar el menú y overlay cuando se activa */
+#iledysile-mobile-menu.active {
+    left: 0; /* Muestra el menú deslizante */
+}
+
+#iledysile-mobile-menu-overlay.active {
+    display: block; /* Muestra el overlay */
+}
+
+/* Estilos del menú y el logo en el menú */
+#iledysile-mobile-menu .iledysile-logo img {
+    width: 150px; /* Ajusta el tamaño del logo */
+    margin: 20px;
+}
+
+#iledysile-mobile-menu-items {
+    margin-top: 30px;
+}
+
+.iledysile-menu > li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea entre elementos */
+    padding: 15px 10px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.iledysile-menu > li:last-child {
+    border-bottom: none; /* Elimina la línea del último elemento */
+}
+
+.iledysile-menu > li > a {
+    text-decoration: none;
+    color: #333; /* Gris oscuro */
+    display: block;
+}
+
+.iledysile-menu > li:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Fondo sutil al pasar el ratón */
+}
+
+.sub-menu {
+    padding-left: 20px; /* Sangría para submenús */
+    border-left: 2px solid rgba(0, 0, 0, 0.1); /* Línea para indicar jerarquía */
+    margin-top: 10px;
+}
+
+.sub-menu > li {
+    padding: 10px 0;
+    border-bottom: none; /* Sin líneas adicionales */
+}
+
+.sub-menu > li > a {
+    color: #666; /* Color más claro para submenús */
+}
+
+.sub-menu > li:hover > a {
+    color: #000; /* Resalta el texto al pasar el ratón */
+}
+
+.iledysile-menu {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0; /* Elimina el espacio interior predeterminado */
+    margin: 0; /* Elimina el espacio exterior predeterminado */
+}
+
+#iledysile-mobile-menu .sub-menu {
+    list-style-type: none; /* Elimina los puntos negros */
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+#iledysile-mobile-menu li.current-menu-item > a {
+    color: #b7816b !important; /* Color de la letra de la opción activa del menú web */
+    text-decoration: overline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: from-font;
+    text-decoration-color: #b7816b;
+}
+
+.meatball {
+  border: none;
+  width: 6rem;
+  height: 5rem;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.5s ease;
+  transform: scale(0.3);
+  position: fixed;
+  right: 0;
+  z-index: 10000;
+  outline: none;
+  
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #B7816B;
+    transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0.3s;
+    
+    &:nth-of-type(1) {
+      transform: translate(calc(-50% - 2.8rem), -50%) rotate(45deg);
+    }
+    
+    &:nth-of-type(2) {
+      transform: translate(-50%, -50%);
+      transition: 0.4s ease 0.1s;
+    }
+    
+    &:nth-of-type(3) {
+      transform: translate(calc(-50% + 2.8rem), -50%) rotate(-45deg);
+    }
+  }
+
+
+  &:focus {
+    outline: none; /* Elimina el borde predeterminado del estado de enfoque */
+    border: none;  /* Asegúrate de que no tenga borde */
+    background-color: transparent;
+  }
+  
+  &:hover {
+    
+    .dot {
+      
+      &:nth-of-type(1) {
+        animation: flicker 0.4s linear;
+      }
+      &:nth-of-type(2) {
+        animation: flicker 0.4s linear 0.05s;
+      }
+      &:nth-of-type(3) {
+        animation: flicker 0.4s linear 0.1s;
+      }
+    }
+  }
+  
+  &.active {
+    transform: rotate(180deg) scale(0.3);
+
+    .dot {
+      transition: width 0.4s ease 0.3s, height 0.4s ease 0.3s, transform 0.2s ease;
+      
+      &:nth-of-type(1) {
+        width: 8rem;
+        height: 1.2rem;
+        border-radius: 1rem;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        width: 0;
+        height: 0;
+      }
+      &:nth-of-type(3) {
+        width: 8rem;
+        height: 1.2rem;
+        border-radius: 1rem;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    
+    &:hover {      
+      .dot {
+        animation: none;
+      }
+    }
+  }
+}
+
+/* Ocultar meatball y menú móvil en pantallas mayores a 768px */
+@media (min-width: 769px) {
+    .meatball,
+    .iledysile-mobile-menu {
+        display: none;
+    }
+    #iledysile-mobile-menu-overlay.active {
+        display: none; /* Muestra el overlay */
+    }
+}
+
+/* Mostrar meatball y menú móvil en pantallas menores o iguales a 768px */
+@media (max-width: 768px) {
+    .meatball,
+    .iledysile-mobile-menu {
+        display: block; /* Ajusta según tu diseño */
+    }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    // width: 2rem;
+    // height: 2rem;
+  }
+  50% {
+    opacity: 0.2;
+    // width: 1.2rem;
+    // height: 1.2rem;
+  }
+  100% {
+    opacity: 1;
+    // width: 2rem;
+    // height: 2rem;
+  }
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END - SLIDING MOBILE MENU */
+/*---------------------------------------*/
+/*---------------------------------------*/
