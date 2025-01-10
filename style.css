@@ -57,8 +57,6 @@ nav#site-navigation {
 
 .primary-navigation li.current-menu-item > a {
     color: #b7816b !important; /* Color de la letra de la opción activa del menú web */
-    text-decoration: overline;
-    text-decoration-style: wavy;
     text-decoration-thickness: from-font;
     text-decoration-color: #b7816b;
 }
@@ -95,6 +93,7 @@ nav#site-navigation {
 #menu-menuh li a:hover {
     color: black;
     background-color: #d7a5ff0f;
+    text-decoration: underline;
 }
 
 .site-header {
