@@ -67,11 +67,14 @@
     background-color: rgba(0, 0, 0, 0.05); /* Fondo sutil al pasar el ratón */
 }
 
-
 .iledysile-menu > li > a:hover {
     text-decoration: underline;
 }
 
+
+.iledysile-menu > li > a:focus {
+    outline: none;
+}
 
 .sub-menu {
     padding-left: 20px; /* Sangría para submenús */
