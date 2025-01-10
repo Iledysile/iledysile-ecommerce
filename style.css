@@ -96,6 +96,10 @@ nav#site-navigation {
     text-decoration: underline;
 }
 
+#menu-menuh li a:focus {
+    outline: none;
+}
+
 .site-header {
     background-color: transparent !important; /* Fondo transparente */
     position: absolute; /* Posición para superponerse sobre el fondo */
