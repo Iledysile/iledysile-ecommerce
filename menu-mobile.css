@@ -67,6 +67,12 @@
     background-color: rgba(0, 0, 0, 0.05); /* Fondo sutil al pasar el ratón */
 }
 
+
+.iledysile-menu > li > a:hover {
+    text-decoration: underline;
+}
+
+
 .sub-menu {
     padding-left: 20px; /* Sangría para submenús */
     border-left: 2px solid rgba(0, 0, 0, 0.1); /* Línea para indicar jerarquía */
@@ -84,6 +90,7 @@
 
 .sub-menu > li:hover > a {
     color: #000; /* Resalta el texto al pasar el ratón */
+    text-decoration: underline;
 }
 
 .iledysile-menu {
@@ -101,8 +108,6 @@
 
 #iledysile-mobile-menu li.current-menu-item > a {
     color: #b7816b !important; /* Color de la letra de la opción activa del menú web */
-    text-decoration: overline;
-    text-decoration-style: wavy;
     text-decoration-thickness: from-font;
     text-decoration-color: #b7816b;
 }
