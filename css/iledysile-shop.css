@@ -1,0 +1,52 @@
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - SHOP STYLING                   */
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+/* Asegúrate de que el contenedor principal tenga 'position: relative' */
+.woocommerce-LoopProduct-link {
+    position: relative !important; /* Esto permite que la imagen secundaria se posicione en relación a este contenedor */
+}
+
+/* Imagen secundaria */
+.second-image {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* Centra la imagen en el eje horizontal */
+    opacity: 0 !important; /* Inicialmente oculta */
+    visibility: hidden !important; /* Mantiene la imagen oculta */
+    transition: opacity 0.3s ease, visibility 0.3s ease !important; /* Animación suave para mostrar/ocultar */
+}
+
+/* Hover sobre la imagen principal para mostrar la imagen secundaria */
+.woocommerce-LoopProduct-link:hover .second-image {
+    display: block !important; /* Muestra la imagen secundaria */
+    opacity: 1 !important; /* Hace visible la imagen secundaria */
+    visibility: visible !important; /* Asegura que la imagen secundaria sea visible */
+}
+
+.woocommerce ul.products li.product a {
+    display: inline-block;  /* Hace que el enlace se ajuste al contenido (imagen) */
+    width: auto;  /* Asegura que solo ocupa el tamaño de la imagen */
+}
+
+/* Ocultar el botón "Añadir al carrito" en la tienda */
+.woocommerce .products .product .add_to_cart_button {
+    display: none !important;
+}
+
+.storefront-primary-navigation {
+    border-bottom: 1px solid #80808026;
+}
+
+.woocommerce-products-header {
+    display: none;
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END - SHOP STYLING                    */
+/*---------------------------------------*/
+/*---------------------------------------*/
