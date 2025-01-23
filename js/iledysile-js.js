@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (window.scrollY > 125) { //El num. son los píxeles que hay que bajar para que cambie a scrolled
             nav.classList.add("scrolled");
             subMenu.classList.add("scrolled");
-            console.log("Hola");
         } else {
             nav.classList.remove("scrolled");
             subMenu.classList.remove("scrolled");
