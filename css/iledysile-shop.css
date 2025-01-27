@@ -37,8 +37,10 @@
     display: none !important;
 }
 
-.storefront-primary-navigation {
-    border-bottom: 1px solid #80808026;
+@media (min-width: 769px) {
+    .storefront-primary-navigation {
+        border-bottom: 1px solid #80808026;
+    }
 }
 
 .woocommerce-products-header {

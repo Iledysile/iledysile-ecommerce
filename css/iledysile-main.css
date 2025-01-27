@@ -30,10 +30,17 @@ body:not(.home) .site-content {
 
 /* Eliminar los márgenes y hacer el contenido más ancho */
 .col-full {
-    max-width: 100% !important; /* Evita que haya un máximo de ancho */
-    padding-left: 100px;  /* Ajuste del espacio izquierdo */
-    padding-right: 100px; /* Ajuste del espacio derecho */
-    margin: 0; /* Eliminar márgenes */
+    max-width: 100% !important; 
+    padding-left: 100px;  
+    padding-right: 100px; 
+    margin: 0; 
+}
+/* Eliminar los márgenes y hacer el contenido más ancho (version mobile) */
+@media (max-width: 768px) {
+    .col-full {
+        padding-left: 28px;  
+        padding-right: 28px; 
+    }
 }
 
 /* Fija el menú en la parte superior */
