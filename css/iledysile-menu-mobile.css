@@ -76,7 +76,7 @@
     outline: none;
 }
 
-.sub-menu {
+.iledysile-menu .sub-menu {
     padding-left: 20px; /* Sangría para submenús */
     border-left: 2px solid rgba(0, 0, 0, 0.1); /* Línea para indicar jerarquía */
     margin-top: 10px;
