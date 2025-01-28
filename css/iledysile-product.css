@@ -3,6 +3,11 @@
 /* INIT - PRODUCT STYLING                */
 /*---------------------------------------*/
 /*---------------------------------------*/
+.site-main {
+    background-color: #d6ab99;
+    opacity: 1 !important;
+}
+
 /* Estilos para el input tipo range */
 input[type="range"] {
     -webkit-appearance: none;
@@ -72,7 +77,8 @@ input[type="range"]::-ms-thumb {
 
     .storefront-full-width-content.single-product div.product .summary {
         width: 50% !important;
-        background-color: #b7816bad;
+    background-color: #d6ab99;
+    opacity: 1 !important;
     }
     .storefront-full-width-content.single-product div.product .summary {
         padding: 3%;
