@@ -23,8 +23,8 @@ function iledysile_custom_thumbnail_size($size) {
 add_filter('woocommerce_get_image_size_single', 'iledysile_custom_single_image_size');
 function iledysile_custom_single_image_size($size) {
     return array(
-        'width'  => 690, 
-        'height' => 900,
+        'width'  => 1500, 
+        'height' => 1992,
         'crop'   => 0
     );
 }
