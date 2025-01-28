@@ -3,6 +3,11 @@
 /* INIT - PRODUCT STYLING                */
 /*---------------------------------------*/
 /*---------------------------------------*/
+.site-main {
+    background-color: #d6ab99;
+    opacity: 1 !important;
+}
+
 /* Estilos para el input tipo range */
 input[type="range"] {
     -webkit-appearance: none;
@@ -44,8 +49,50 @@ input[type="range"]::-ms-thumb {
     border-radius: 5px;
     cursor: pointer;
 }
-.reset_variations{
+
+.reset_variations {
     display: none;
+}
+
+.site-content .col-full {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.site-content .col-full img {
+    border-radius: 0px;
+}
+
+@media (min-width: 768px) {
+    body:not(.home) .site-content {
+        margin-top: 79px !important;
+    }
+
+    .storefront-full-width-content.single-product div.product .woocommerce-product-gallery {
+        width: 50% !important;
+        margin-right: 0px !important;
+    }
+
+    .storefront-full-width-content.single-product div.product .summary {
+        width: 50% !important;
+    background-color: #d6ab99;
+    opacity: 1 !important;
+    }
+    .storefront-full-width-content.single-product div.product .summary {
+        padding: 3%;
+    }
+    .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
+            margin-left: 1.618em !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .woocommerce-product-gallery__trigger{
+        display: none;
+    }
+    body:not(.home) .site-content {
+        margin-top: 0px;
+    }
 }
 /*---------------------------------------*/
 /*---------------------------------------*/
