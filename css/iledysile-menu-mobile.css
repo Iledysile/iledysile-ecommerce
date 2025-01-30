@@ -207,7 +207,7 @@
   }
 }
 
-/* Ocultar meatball y menú móvil en pantallas mayores a 768px */
+/* Ocultar meatball y menú móvil en pantallas mayores a 768px 
 @media (min-width: 769px) {
     .meatball,
     .iledysile-mobile-menu {
@@ -218,13 +218,15 @@
     }
 }
 
-/* Mostrar meatball y menú móvil en pantallas menores o iguales a 768px */
+/* Mostrar meatball y menú móvil en pantallas menores o iguales a 768px 
 @media (max-width: 768px) {
     .meatball,
     .iledysile-mobile-menu {
-        display: block; /* Ajusta según tu diseño */
+        display: block; 
     }
-}
+} 
+*/
+
 
 @keyframes flicker {
   0% {

@@ -5,7 +5,12 @@
 /*---------------------------------------*/
 
 body:not(.home) .site-content {
-    margin-top: 79px !important;
+    margin-top: 0px !important;
+    background-color: #d8d4ea !important;
+}
+
+.storefront-primary-navigation {
+    display: none;
 }
 
 /* Asegúrate de que el contenedor principal tenga 'position: relative' */

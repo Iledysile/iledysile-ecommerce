@@ -1,4 +1,3 @@
-//Agrega flechas de navegación al carrusel de imágenes
 jQuery(document).ready(function ($) {
     let currentIndex = 0;
     const images = $('.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image');
