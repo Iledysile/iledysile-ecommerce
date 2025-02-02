@@ -5,6 +5,16 @@ function iledysile_enqueue_styles() {
     wp_enqueue_style('storefront-child-style', get_stylesheet_uri(), array('storefront-style'));
     wp_enqueue_style('iledysile-menu-mobile-style', get_stylesheet_directory_uri() . '/css/iledysile-menu-mobile.css', ['storefront-child-style']);
 
+
+    // Estilos específicos para la página de inicio
+    if (is_front_page()) { 
+        wp_enqueue_style(
+            'iledysile-home-style', 
+            get_stylesheet_directory_uri() . '/css/iledysile-home.css', 
+            array(), '1.0', 
+            'all');
+    }
+
     // Estilos específicos para la página de shop
     if (is_shop() || is_product_category()) {
         wp_enqueue_style(
@@ -27,4 +37,5 @@ function iledysile_enqueue_styles() {
         );
     }
 }
+
 add_action('wp_enqueue_scripts', 'iledysile_enqueue_styles');

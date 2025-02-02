@@ -1,0 +1,68 @@
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - APPLIED IN HOME PAGE           */
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+body {
+    padding: 0 0 100vh 0;
+    scroll-behavior: smooth;    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 40px;
+    background-color: #f0f0f0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font: 700 100%/1 "Antonio", sans-serif;
+}
+
+.hero__title {
+    color: #2d3436;
+    display: block;
+    font-size: clamp(4.25rem, 13.5vw, 15rem);
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1;
+}
+
+.hero__title-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero__title-bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font: inherit;
+    z-index: 0;
+}
+
+.hero__title-bg--front {
+    color: #546de5;
+}
+
+.hero__title-bg--back {
+    -webkit-text-stroke: 3px currentColor;
+    -webkit-text-fill-color: transparent;
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END  - APPLIED IN HOME PAGE           */
+/*---------------------------------------*/
+/*---------------------------------------*/
