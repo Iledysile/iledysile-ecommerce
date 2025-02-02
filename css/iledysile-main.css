@@ -45,7 +45,10 @@ body:not(.home) .site-content {
 
 @media (min-width: 768px) {
     .site-header-cart .cart-contents .count {
-        padding-left: 64% !important;
+        padding-left: 40% !important;
+    }
+    .iledysile-menu {
+        padding-left: 15px;
     }
 }
 
@@ -73,9 +76,17 @@ button#site-navigation-menu-toggle {
     display: none;
 }
 
+.cart-contents .count {
+    display: none !important;
+}
+
 nav#site-navigation {
     position: fixed;
     width: 90%;
+}
+
+.primary-navigation{
+    display: none !important;
 }
 
 .primary-navigation li.current-menu-item > a {
@@ -115,7 +126,7 @@ nav#site-navigation {
 
 /* Se oculta el menú principal horizontal en todas las versiones */
 .primary-navigation {
-    display: none !important;
+    display: block;
 }
 
 #menu-menuh li a:hover {
