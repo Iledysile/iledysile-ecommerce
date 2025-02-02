@@ -226,45 +226,6 @@
     }
 }
 
-/* Ocultar meatball y menú móvil en pantallas mayores a 768px 
-@media (min-width: 769px) {
-    .meatball,
-    .iledysile-mobile-menu {
-        display: none;
-    }
-    #iledysile-mobile-menu-overlay.active {
-        display: none; /* Muestra el overlay */
-    }
-}
-
-/* Mostrar meatball y menú móvil en pantallas menores o iguales a 768px 
-@media (max-width: 768px) {
-    .meatball,
-    .iledysile-mobile-menu {
-        display: block; 
-    }
-} 
-*/
-
-
-@keyframes flicker {
-  0% {
-    opacity: 1;
-    // width: 2rem;
-    // height: 2rem;
-  }
-  50% {
-    opacity: 0.2;
-    // width: 1.2rem;
-    // height: 1.2rem;
-  }
-  100% {
-    opacity: 1;
-    // width: 2rem;
-    // height: 2rem;
-  }
-}
-
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - SLIDING MOBILE MENU */
