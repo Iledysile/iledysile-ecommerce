@@ -19,7 +19,7 @@
 <!-- Agregar el CDN de GSAP solo en la página de inicio (Efecto letras inicio) -->
 <?php if ( is_front_page() ) : ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
 <?php endif; ?>
 
 <?php wp_head(); ?>
