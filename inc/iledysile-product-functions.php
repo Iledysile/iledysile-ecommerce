@@ -23,4 +23,22 @@ function resaltar_shop_y_categoria($classes, $item, $args) {
 }
 add_filter('nav_menu_css_class', 'resaltar_shop_y_categoria', 10, 3);
 
+add_filter( 'woocommerce_dropdown_variation_attribute_options_args', function( $args ) {
+    // Verifica si el atributo es el correcto: 'attribute_size'
+    if ( isset( $args['attribute'] ) && 'size' === $args['attribute'] ) {
+        // Cambia el texto de la opción por defecto
+        $args['show_option_none'] = 'XS S M L';
+    }
+    return $args;
+});
 
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5); // Título
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10); // Descripción
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 15); // Precio
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 20); // Añadir al carrito
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 25); // Talla y categoría
