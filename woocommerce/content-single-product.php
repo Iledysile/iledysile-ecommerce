@@ -43,30 +43,33 @@ if ( post_password_required() ) {
     do_action( 'woocommerce_before_single_product_summary' );
     ?>
 
-    <div class="summary entry-summary">
-        <?php
-        /**
-         * Hook: woocommerce_single_product_summary.
-         *
-         * @hooked woocommerce_template_single_title - 5
-         * @hooked woocommerce_template_single_rating - 10
-         * @hooked woocommerce_template_single_price - 10
-         * @hooked woocommerce_template_single_excerpt - 20
-         * @hooked woocommerce_template_single_add_to_cart - 30
-         * @hooked woocommerce_template_single_meta - 40
-         * @hooked woocommerce_template_single_sharing - 50
-         * @hooked WC_Structured_Data::generate_product_data() - 60
-         */
-        do_action( 'woocommerce_single_product_summary' );
+<div class="summary entry-summary">
+    <?php
+    /**
+     * Hook: woocommerce_single_product_summary.
+     *
+     * @hooked woocommerce_template_single_title - 5
+     * @hooked woocommerce_template_single_rating - 10
+     * @hooked woocommerce_template_single_price - 15
+     * @hooked woocommerce_template_single_add_to_cart - 20
+     * @hooked woocommerce_template_single_meta - 25
+     */
+    do_action( 'woocommerce_single_product_summary' );
 
-        // Añadimos la descripción dentro del resumen
-        woocommerce_output_product_data_tabs();
-        ?>
-    </div>
+    // Mostrar la descripción del producto justo después del precio
+    if ( $product->get_description() ) {
+        echo '<div class="iledysile-product-description">';
+        echo '<h2>' . __('Descripción', 'woocommerce') . '</h2>';
+        echo '<p>' . $product->get_description() . '</p>';
+        echo '</div>';
+    }
+    ?>
+</div>
+
 
     <?php
     // Eliminamos el hook que muestra la descripción en su ubicación original
-	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
     /**
      * Hook: woocommerce_after_single_product_summary.
      *

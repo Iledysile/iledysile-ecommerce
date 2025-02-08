@@ -3,6 +3,12 @@
 /* INIT - PRODUCT STYLING                */
 /*---------------------------------------*/
 /*---------------------------------------*/
+
+/* Load elements to hide first: */
+@import url('iledysile-product-hide-elements.css');
+
+
+
 .site-main {
     background-color: #d6ab99;
     opacity: 1 !important;
@@ -51,14 +57,6 @@ input[type="range"]::-ms-thumb {
     cursor: pointer;
 }
 
-.reset_variations {
-    display: none !important;
-}
-
-.flex-control-nav.flex-control-thumbs {
-    display: none;
-}
-
 .site-content .col-full {
     padding-left: 0px;
     padding-right: 0px;
@@ -95,6 +93,26 @@ input[type="range"]::-ms-thumb {
 }
 
 
+#size {
+    appearance: none;        /* Para la mayoría de los navegadores */
+    -webkit-appearance: none; /* Para Safari y Chrome */
+    -moz-appearance: none;    /* Para Firefox */
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: transparent;
+    width: 120px;
+    color: #43454b;
+    font-size: 16pt;
+  }  
+  /* Para quitar la flecha en Internet Explorer y Edge */
+  #size::-ms-expand {
+    display: none;
+  }
+  #size option[value=""] {
+    text-align: center; /* Centra el texto de la opción por defecto */
+}
+
+  
 
 @media (min-width: 768px) {
     body:not(.home) .site-content {
@@ -135,9 +153,6 @@ input[type="range"]::-ms-thumb {
 }
 
 @media (max-width: 768px) {
-    .woocommerce-product-gallery__trigger{
-        display: none;
-    }
     body:not(.home) .site-content {
         margin-top: 0px;
     }

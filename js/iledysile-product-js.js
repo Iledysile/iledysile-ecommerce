@@ -37,3 +37,29 @@ jQuery(document).ready(function ($) {
 
     updateGallery(currentIndex);
 });
+
+//En el seleccionable de tallas, oculta la primera opción que contiene "XS S M L"
+jQuery(document).ready(function($) {
+    var selectElement = $('#size');
+
+    var firstOption = selectElement.find('option:first-child');
+    firstOption.attr('disabled', 'disabled').attr('selected', 'selected').hide();
+
+    selectElement.on('focus', function() {
+        selectElement.find('option:first-child').hide();
+    });
+
+    selectElement.on('blur', function() {
+        selectElement.find('option:first-child').hide();
+    });
+
+    selectElement.on('change', function() {
+        var selectedOption = selectElement.val();
+        if (selectedOption !== "") {
+            selectElement.find('option:first-child').hide();
+        } else {
+            selectElement.find('option:first-child').show();
+        }
+    });
+});
+

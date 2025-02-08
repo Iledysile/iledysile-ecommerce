@@ -1,0 +1,33 @@
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - PRODUCT HIDE ELEMENTS          */
+/*---------------------------------------*/
+/*---------------------------------------*/
+.reset_variations {
+    display: none !important;
+}
+
+.flex-control-nav.flex-control-thumbs {
+    display: none;
+}
+
+.product_meta {
+    display: none;
+}
+
+.variations th.label {
+    display: none !important;
+}
+
+
+@media (max-width: 768px) {
+    .woocommerce-product-gallery__trigger {
+        display: none;
+    }
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END - PRODUCT STYLING                 */
+/*---------------------------------------*/
+/*---------------------------------------*/

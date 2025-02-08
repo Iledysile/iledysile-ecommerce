@@ -21,13 +21,17 @@ body {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    font: 700 100%/1 "Antonio", sans-serif;
+}
+
+.hero h1 {
+    font-family: "Be Vietnam Pro", serif;
+    font-weight: 400 !important;
 }
 
 .hero__title {
     color: #2d3436;
     display: block;
-    font-size: clamp(4.25rem, 13.5vw, 15rem);
+    font-size: clamp(4.25rem, 8.5vw, 10rem);
     padding: 0;
     text-align: center;
     text-transform: uppercase;
@@ -53,7 +57,7 @@ body {
 }
 
 .hero__title-bg--front {
-    color: #546de5;
+    color: #e5bc54;
 }
 
 .hero__title-bg--back {
