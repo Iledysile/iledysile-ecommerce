@@ -32,13 +32,34 @@ add_filter( 'woocommerce_dropdown_variation_attribute_options_args', function( $
     return $args;
 });
 
+
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5); // Título
-add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10); // Descripción
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 15); // Precio
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 20); // Añadir al carrito
-add_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 25); // Talla y categoría
+add_action( 'woocommerce_single_product_summary', 'iledysile_move_product_description', 25 ); // Descripción
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 30); // Talla y categoría
+
+
+
+function iledysile_move_product_description() {
+    do_action( 'iledysile_single_product_description' ); // Disparamos nuestro hook personalizado
+}
+
+// Enganchamos la función que muestra la descripción a nuestro hook
+add_action( 'iledysile_single_product_description', 'iledysile_render_product_description' );
+
+function iledysile_render_product_description() {
+    global $post;
+    $product = wc_get_product( $post->ID );
+
+    if ( $product->get_description() ) {
+        echo '<div class="iledysile-product-description">';
+        echo wp_kses_post( wpautop( $product->get_description() ) );
+        echo '</div>';
+    }
+}
