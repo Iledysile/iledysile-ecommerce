@@ -3,8 +3,10 @@
 function iledysile_enqueue_styles() {
     wp_enqueue_style('storefront-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('storefront-child-style', get_stylesheet_uri(), array('storefront-style'));
-    wp_enqueue_style('iledysile-menu-mobile-style', get_stylesheet_directory_uri() . '/css/iledysile-menu-mobile.css', ['storefront-child-style']);
+    wp_enqueue_style('iledysile-square-menu-style', get_stylesheet_directory_uri() . '/css/iledysile-square-menu.css', ['storefront-child-style']);
 
+    /* Los CSS que NO dependen de una condición se declaran en el style.css raíz 
+     (Ej: idy-main.cs, idy-main-hide-elements.css) */
 
     // Estilos específicos para la página de inicio
     if (is_front_page()) { 

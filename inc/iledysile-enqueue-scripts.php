@@ -2,8 +2,8 @@
 // Cargar scripts personalizados
 function iledysile_enqueue_scripts() {
     wp_enqueue_script(
-        'iledysile-menu-mobile-meatball-js',
-        get_stylesheet_directory_uri() . '/js/iledysile-menu-mobile-meatball-js.js',
+        'iledysile-square-menu-js',
+        get_stylesheet_directory_uri() . '/js/iledysile-square-menu-js.js',
         array(),
         '1.0',
         true
