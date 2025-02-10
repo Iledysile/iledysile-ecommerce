@@ -55,14 +55,6 @@ if ( post_password_required() ) {
      * @hooked woocommerce_template_single_meta - 25
      */
     do_action( 'woocommerce_single_product_summary' );
-
-    // Mostrar la descripción del producto justo después del precio
-    if ( $product->get_description() ) {
-        echo '<div class="iledysile-product-description">';
-        echo '<h2>' . __('Descripción', 'woocommerce') . '</h2>';
-        echo '<p>' . $product->get_description() . '</p>';
-        echo '</div>';
-    }
     ?>
 </div>
 
