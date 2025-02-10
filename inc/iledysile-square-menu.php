@@ -8,7 +8,7 @@ function iledysile_add_square_menu() {
             <?php
             wp_nav_menu(
                 array(
-                    'theme_location' => 'iledysile-square-menu',
+                    'theme_location' => 'iledysile-mobile-menu',
                     'menu_class'     => 'iledysile-menu',
                     'container'      => false,
                 )
