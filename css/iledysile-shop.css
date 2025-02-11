@@ -4,6 +4,9 @@
 /*---------------------------------------*/
 /*---------------------------------------*/
 
+/* Import elements to hide first: */
+@import url('iledysile-shop-hide-elements.css');
+
 body:not(.home) .site-content {
     margin-top: 0px !important;
     background-color: #d8d4ea !important;
