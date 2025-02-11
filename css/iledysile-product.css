@@ -4,10 +4,8 @@
 /*---------------------------------------*/
 /*---------------------------------------*/
 
-/* Load elements to hide first: */
+/* Import elements to hide first: */
 @import url('iledysile-product-hide-elements.css');
-
-
 
 .site-main {
     background-color: #d6ab99;

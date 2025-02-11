@@ -8,6 +8,41 @@
     display: none;
 }
 
+/* Oculta el botón hamburguesa del menú mobile antiguo */
+button#site-navigation-menu-toggle {
+    display: none;
+}
+
+.cart-contents .count {
+    display: none !important;
+}
+
+.primary-navigation{
+    display: none !important;
+}
+
+.site-search {
+    display: none !important;
+}
+
+.site-branding {
+    display: none !important;
+}
+
+/* Oculta completamente la barra de acceso rápido del footer en moviles */
+.storefront-handheld-footer-bar {
+    display: none !important;
+}
+
+.edit-link {
+    display: none;
+}
+
+/* Ocultar breadcrumb */
+.storefront-breadcrumb {
+    display: none;
+}
+
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - APPLIED IN ALL PAGES */
