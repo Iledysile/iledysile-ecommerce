@@ -1,0 +1,113 @@
+body {
+    background-color: #ffe7c0;
+}
+
+.page-id-108 h1.entry-title {
+    visibility: hidden; /* Oculta el título visualmente, pero sigue en el código HTML (ideal para SEO) */
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+}
+
+input, textarea {
+    background-color: #f1defc !important;
+    max-width: 68% !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0px !important;
+}
+
+.wpforms-submit {
+    background-color: transparent !important;
+    color: #43454b !important;
+    border-top: 2px solid #43454b !important;
+    border-bottom: 2px solid #43454b !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.wpforms-submit:hover {
+    background-color: #43454b !important;
+    color: white !important;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+    margin-top: 25px;
+}
+
+
+@media (min-width: 768px) {
+    .iledysile-square-menu-logo {
+        position: fixed;
+    }
+    .hentry .entry-content .wp-block-columns .wp-block-column {
+        margin-bottom: 0px;
+    }
+    .hentry .entry-content figure.wp-block-image {
+        margin-bottom: 0px;
+    }
+    .wp-block-columns {
+        margin-bottom: 0px;
+    }
+    .site-main {
+        margin-bottom: 0px !important;
+    }
+    .hentry {
+        margin-bottom: 0px;
+    }
+    body:not(.home) .site-content {
+        margin-top: 1em;
+    }
+    .hentry .entry-content .wp-block-columns .wp-block-column:not(:first-child) {
+        margin-top: 6em;
+    }
+    .hentry .entry-content .wp-block-columns .wp-block-column:not(:last-child) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;  /* Alinea la imagen abajo */
+    }
+
+    .wpforms-container .wpforms-field {
+        padding: 6px 0;
+    }
+
+}
+
+.wp-block-image img {
+    max-width: fit-content;
+}
+
+@media (max-width: 800px) {
+    .wp-block-columns {
+        flex-direction: column-reverse !important;
+    }
+    :where(.wp-block-columns) {
+        margin-bottom: 0 !important;
+    }
+    .site-main {
+        margin-bottom: 0 !important;
+    }
+    .hentry {
+        margin-bottom   : 0 !important;
+    }
+    .hentry .entry-content .wp-block-columns .wp-block-column {
+        margin-bottom: 0 !important;
+    }
+    .hentry .entry-content figure.wp-block-image {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .hentry .entry-content .wp-block-columns .wp-block-column:not(:last-child), .editor-styles-wrapper .wp-block-columns .wp-block-column:not(:last-child) {
+        margin-right: 20px !important;
+    }
+    .wp-block-image img {
+        width: 430px;
+    }
+}
