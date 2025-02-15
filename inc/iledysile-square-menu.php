@@ -1,5 +1,6 @@
 <?php
-// Agregar menú square personalizado
+
+// Agregar iledysile-square-menu personalizado
 function iledysile_add_square_menu() {
     ?>
     <div id="iledysile-square-menu-overlay" class="iledysile-menu-overlay"></div>
@@ -33,4 +34,5 @@ function iledysile_add_square_menu() {
     </button>
     <?php
 }
+
 add_action('storefront_before_site', 'iledysile_add_square_menu');

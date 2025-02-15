@@ -38,6 +38,17 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
+
+    // Estilos específicos para la página de Kontakt
+    if (is_page('kontakt')) {
+        wp_enqueue_style(
+            'iledysile-kontakt-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-kontakt.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'iledysile_enqueue_styles');

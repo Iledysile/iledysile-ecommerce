@@ -48,10 +48,10 @@
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-/* El texto dentro del logo */
 .iledysile-logo {
     font-size: 4rem; /* Tamaño de fuente con rem para flexibilidad */
     color: black; 
+	text-transform: uppercase;
 }
 
 .iledysile-square-menu-bottom {
@@ -86,7 +86,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.35);
 	z-index: 9998;
 }
 
@@ -121,9 +121,8 @@
 	text-align: right;
 }
 
-.iledysile-menu li:hover {
-	background-color: rgb(237 211 255 / 18%);
-	/* Fondo sutil al pasar el ratón */
+.iledysile-menu a:hover {
+	color: #9168ff;
 }
 
 
@@ -161,7 +160,7 @@
 	border: none;
 	width: 8rem;
 	height: 8rem;
-	background: #9168ff;
+	background-color: #9168ff;
 	cursor: pointer;
 	transition: 0.5s ease;
 	transform: scale(0.3);
@@ -171,15 +170,30 @@
 	outline: none;
 }
 
-.iledysile-square-menu-button:hover {
-	background: #b29ecb;
+@media (min-width: 768px) and (hover: hover) {
+    .iledysile-square-menu-button:hover {
+        background-color: #c7b7db;
+    }
+}
+
+@media (max-width: 768px), (hover: none) {
+    .iledysile-square-menu-button:hover {
+        background-color: #9168ff;
+    }
 }
 
 
-
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 	.iledysile-square-menu {
 		font-size: 26pt;
+	}
+}
+
+@media (max-width: 768px) {
+	#iledysile-square-menu {
+		left: -150%;
+		width: 150%;
+		font-size: 20pt;
 	}
 }
 
