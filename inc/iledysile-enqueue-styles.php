@@ -49,6 +49,19 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
+
+        // Estilos específicos para la página de Über
+        if (is_page('uber')) {
+            wp_enqueue_style(
+                'iledysile-uber-style',
+                get_stylesheet_directory_uri() . '/css/iledysile-uber.css',
+                array(),
+                '1.0',
+                'all'
+            );
+        }
+
+    
 }
 
 add_action('wp_enqueue_scripts', 'iledysile_enqueue_styles');

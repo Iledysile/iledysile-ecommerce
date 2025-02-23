@@ -1,12 +1,14 @@
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - KONTAKT STYLING                */
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+/* Import elements to hide first: */
+@import url('iledysile-kontakt-hide-elements.css');
+
 body {
     background-color: #ffe7c0;
-}
-
-.page-id-108 h1.entry-title {
-    visibility: hidden; /* Oculta el título visualmente, pero sigue en el código HTML (ideal para SEO) */
-    position: absolute; 
-    width: 1px;
-    height: 1px;
 }
 
 input, textarea {
@@ -111,3 +113,9 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
         width: 430px;
     }
 }
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END  - KONTAKT STYLING                */
+/*---------------------------------------*/
+/*---------------------------------------*/

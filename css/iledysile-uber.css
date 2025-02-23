@@ -1,0 +1,141 @@
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* INIT - ÜBER STYLING                   */
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+/* Import elements to hide first: */
+@import url('iledysile-uber-hide-elements.css');
+
+body {
+    background-color: #EDE8E5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 24vh;
+    flex-direction: column;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+}
+
+.background-text {
+    font-size: clamp(24px, 3.8vw, 80px);
+    color: #FFB401;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: black;
+    font-size: clamp(14px, 1.1vw, 30px);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .iledysile-square-menu-logo {
+        position: fixed;
+    }
+
+    .iledysile-columns {
+        height: 100vh;
+        margin-bottom: 0px !important;
+    }
+
+    .col-full {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .site-content {
+        margin-top: 0px !important;
+    }
+
+    .hentry {
+        margin-bottom: 0px !important;
+    }
+
+    .site-main {
+        margin-bottom: 0px !important;
+    }
+
+    .container1 {
+        align-items: flex-end;
+    }
+
+    .container2 {
+        padding-top: 53px;
+        padding-left: 89px;
+    }
+
+    .container3 {
+        align-items: flex-start;
+        padding-left: 54px;
+    }
+
+    .container4 {
+        position: absolute;
+        top: 22%;
+        left: 37%;
+    }
+
+    .container5 {
+        position: absolute;
+        top: 47%;
+        left: 32%;
+    }
+
+    .container6 {
+        position: absolute;
+        top: 72%;
+        left: 14%;
+    }
+
+    .container7 {
+        position: absolute;
+        top: 10%;
+        left: 69%;
+    }
+
+    .container8 {
+        position: absolute;
+        left: 86%;
+        top: 29%;
+    }
+
+    .container9 {
+        position: absolute;
+        top: 47%;
+        left: 65%;
+    }
+
+    .container10 {
+        position: absolute;
+        top: 69%;
+        left: 65%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hentry .entry-content .wp-block-columns .wp-block-column {
+        padding-right: 0 !important;
+    }
+}
+
+/*---------------------------------------*/
+/*---------------------------------------*/
+/* END  - ÜBER STYLING                   */
+/*---------------------------------------*/
+/*---------------------------------------*/
