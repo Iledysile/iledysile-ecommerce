@@ -49,11 +49,6 @@ body {
         padding-right: 4.347826087% !important;
     }
 
-    .hentry .entry-content .wp-block-columns .wp-block-column, .editor-styles-wrapper .wp-block-columns .wp-block-column {
-        flex-basis: 0 !important;
-        flex-grow: 1 !important;
-    }
-
     .iledysile-square-menu-logo {
         position: fixed;
     }
