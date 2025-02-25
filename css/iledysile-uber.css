@@ -38,12 +38,18 @@ body {
     transform: translate(-50%, -50%);
     z-index: 2;
     color: black;
-    font-size: clamp(14px, 1.1vw, 30px);
+    font-size: clamp(14px, 1.2vw, 30px);
     line-height: 1.2;
     white-space: nowrap;
 }
 
 @media (min-width: 768px) {
+
+    .hentry .entry-content .wp-block-columns .wp-block-column, .editor-styles-wrapper .wp-block-columns .wp-block-column {
+        flex-basis: 0 !important;
+        flex-grow: 1 !important;
+    }
+
     .iledysile-square-menu-logo {
         position: fixed;
     }
@@ -53,9 +59,27 @@ body {
         margin-bottom: 0px !important;
     }
 
+    .iledysile-imgvid {
+        min-height: 65vh;
+    }
+
     .col-full {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .iledysile-columns-2 {
+        padding-left: 6% !important;
+        padding-top: 5% !important;
+        text-align: justify;
+    }
+
+    .iledysile-column-right-img {
+        min-width: 66vh;
+    }
+
+    .iledysile-column-left-parraf {
+        min-width: 55vh;
     }
 
     .site-content {
@@ -104,7 +128,7 @@ body {
 
     .container7 {
         position: absolute;
-        top: 10%;
+        top: 9%;
         left: 69%;
     }
 
@@ -116,8 +140,8 @@ body {
 
     .container9 {
         position: absolute;
-        top: 47%;
-        left: 65%;
+        top: 43%;
+        left: 63%;
     }
 
     .container10 {
