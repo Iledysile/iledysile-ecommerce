@@ -45,9 +45,8 @@ body {
 
 @media (min-width: 768px) {
 
-    .hentry .entry-content .wp-block-columns .wp-block-column, .editor-styles-wrapper .wp-block-columns .wp-block-column {
-        flex-basis: 0 !important;
-        flex-grow: 1 !important;
+    .iledysile-column-padding-right {
+        padding-right: 4.347826087% !important;
     }
 
     .iledysile-square-menu-logo {
@@ -74,12 +73,16 @@ body {
         text-align: justify;
     }
 
+    .iledysile-columns-2 .wp-block-column {
+        margin-right: 0 !important;
+    }
+
     .iledysile-column-right-img {
-        min-width: 66vh;
+        /*min-width: 66vh;*/
     }
 
     .iledysile-column-left-parraf {
-        min-width: 55vh;
+       /* min-width: 55vh; */
     }
 
     .site-content {
