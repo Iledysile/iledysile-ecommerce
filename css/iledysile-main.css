@@ -33,9 +33,6 @@ body:not(.home) .site-content {
 }
 
 @media (min-width: 768px) {
-    .site-header-cart .cart-contents .count {
-        padding-left: 40% !important;
-    }
     .iledysile-menu {
         padding-left: 15px;
     }

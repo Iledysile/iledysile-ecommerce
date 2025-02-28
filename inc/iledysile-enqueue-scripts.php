@@ -9,6 +9,14 @@ function iledysile_enqueue_scripts() {
         true
     );
 
+    wp_enqueue_script(
+        'iledysile-cart-menu-bar-js',
+        get_stylesheet_directory_uri() . '/js/iledysile-cart-menu-bar.js',
+        array(),
+        '1.0',
+        true
+    );
+
     if ( is_front_page()) {
         wp_enqueue_script( 
             'iledysile-hero-home-js', 

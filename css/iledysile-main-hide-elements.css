@@ -4,18 +4,19 @@
 /*---------------------------------------*/
 /*---------------------------------------*/
 
-#site-header-cart {
+    
+/*#site-header-cart {
     display: none;
-}
+}*/
 
 /* Oculta el botón hamburguesa del menú mobile antiguo */
 button#site-navigation-menu-toggle {
     display: none;
 }
 
-.cart-contents .count {
+/*.cart-contents .count {
     display: none !important;
-}
+}*/
 
 .primary-navigation{
     display: none !important;

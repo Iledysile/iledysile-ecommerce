@@ -81,6 +81,13 @@ body {
         margin-right: 0 !important;
     }
 
+    .iledysile-column-bottom-left {
+        padding-left: 6% !important;
+        padding-top: 5% !important;
+        text-align: justify;
+        flex-basis: 34.9% !important;
+    }
+
     .site-content {
         margin-top: 0px !important;
     }
@@ -179,7 +186,7 @@ body {
         padding-top: 30px;
     }
     .iledysile-img-rahel {
-        min-height: 60vh !important;
+        min-height: 62vh !important;
     }
 }
 

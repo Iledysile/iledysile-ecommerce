@@ -158,8 +158,8 @@
 
 .iledysile-square-menu-button {
 	border: none;
-	width: 8rem;
-	height: 8rem;
+	width: 9rem;
+	height: 9rem;
 	background-color: #6B04FA;
 	cursor: pointer;
 	transition: 0.5s ease;
@@ -169,6 +169,24 @@
 	z-index: 10000;
 	outline: none;
 }
+
+/* Hack para el carrito de la compra */
+.site-header-cart .cart-contents::after {
+    content: "" !important;
+    width: 20px !important;
+    height: 20px !important;
+    background-color: rgb(255, 140, 0) !important;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.site-header-cart .cart-contents .count {
+	position: fixed;
+	top: 20px;
+    right: 200px;
+}
+
 
 @media (min-width: 768px) and (hover: hover) {
     .iledysile-square-menu-button:hover {
