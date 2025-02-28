@@ -8,6 +8,13 @@
     position: absolute; 
     left: -9999px;
 }
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .iledysile-columns {
+        display: none !important;
+    }
+}
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - ÜBER HIDE ELEMENTS           */

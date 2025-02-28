@@ -49,9 +49,8 @@ body {
         padding-right: 4.347826087% !important;
     }
 
-    .hentry .entry-content .wp-block-columns .wp-block-column, .editor-styles-wrapper .wp-block-columns .wp-block-column {
-        flex-basis: 0 !important;
-        flex-grow: 1 !important;
+    .wp-block-columns {
+        flex-wrap: nowrap !important;
     }
 
     .iledysile-square-menu-logo {
@@ -153,8 +152,34 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hentry .entry-content .wp-block-columns .wp-block-column {
-        padding-right: 0 !important;
+    .site-content {
+        margin-top: 0 !important;
+    }
+    .col-full {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .iledysile-columns-2 {
+        padding: 40px;
+        gap: 0 !important;
+        text-align: justify;
+        margin-bottom: 0 !important;
+    }
+    .iledysile-column-padding-right {
+        margin-bottom: 0 !important;
+    }
+    .iledysile-columns-bottom {
+        flex-direction: column-reverse !important;
+    }
+    .iledysile-column-bottom-left {
+        padding: 0 40px 40px 40px !important;
+        text-align: justify;
+    }
+    .iledysile-column-bottom-right-img {
+        padding-top: 30px;
+    }
+    .iledysile-img-rahel {
+        min-height: 60vh !important;
     }
 }
 
