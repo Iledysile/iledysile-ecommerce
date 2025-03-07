@@ -24,6 +24,13 @@ body:not(.home) .site-content {
     margin: 0;
 }
 
+/* Oculta el viejo carrito de la compra */
+.site-header-cart .cart-contents {
+    display: none;
+    position: absolute !important;
+    top: -10000px !important;
+}
+
 /* Eliminar los márgenes y hacer el contenido más ancho (version mobile) */
 @media (max-width: 768px) {
     .col-full {

@@ -4,19 +4,10 @@
 /*---------------------------------------*/
 /*---------------------------------------*/
 
-    
-/*#site-header-cart {
-    display: none;
-}*/
-
 /* Oculta el botón hamburguesa del menú mobile antiguo */
 button#site-navigation-menu-toggle {
     display: none;
 }
-
-/*.cart-contents .count {
-    display: none !important;
-}*/
 
 .primary-navigation{
     display: none !important;
@@ -30,7 +21,6 @@ button#site-navigation-menu-toggle {
     display: none !important;
 }
 
-/* Oculta completamente la barra de acceso rápido del footer en moviles */
 .storefront-handheld-footer-bar {
     display: none !important;
 }
@@ -41,6 +31,14 @@ button#site-navigation-menu-toggle {
 
 /* Ocultar breadcrumb */
 .storefront-breadcrumb {
+    display: none;
+}
+
+.site-header-cart .cart-contents .amount {
+    display: none;
+}
+
+.site-header-cart .cart-contents .count {
     display: none;
 }
 

@@ -149,6 +149,14 @@
 	margin: 0;
 	/* Elimina el espacio exterior predeterminado */
 }
+.iledysile-cart-count {
+	position: fixed;
+    top: 18px;
+    right: 25px;
+    z-index: 1;
+    color: white;
+    pointer-events: none;
+}
 
 #iledysile-square-menu li.current-menu-item a {
 	text-decoration-thickness: from-font;
