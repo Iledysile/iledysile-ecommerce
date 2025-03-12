@@ -5,11 +5,15 @@ function iledysile_add_cart_count() {
     $cart_count = WC()->cart->get_cart_contents_count();
 
     // Solo mostrar el span si el contador es mayor a cero
-    if ($cart_count > 0) {
+    // Muestra el número de productos en el carrito
         ?>
-        <span id="iledysile-cart-count" class="iledysile-cart-count">
-            <?php echo $cart_count; ?> <!-- Muestra el número de productos en el carrito -->
-        </span>
+        <a href="/cart/">
+            <div id="iledysile-square-cart-button" class="iledysile-square-cart-button">
+                <span id="iledysile-cart-count" class="iledysile-cart-count">
+                    <?php echo $cart_count; ?>
+                </span>
+            </div>
+        </a>
         <?php
     }
 }
@@ -35,9 +39,9 @@ function custom_cart_refresh_script_blocks() {
 
                         // Mostrar u ocultar el span según el valor de cartCount
                         if (cartCount > 0) {
-                            $('#iledysile-cart-count').show();  // Mostrar el span
+                            $('#iledysile-square-cart-button').show();  // Mostrar el span
                         } else {
-                            $('#iledysile-cart-count').hide();  // Ocultar el span si es 0
+                            $('#iledysile-square-cart-button').hide();  // Ocultar el span si es 0
                         }
                     }
                 });

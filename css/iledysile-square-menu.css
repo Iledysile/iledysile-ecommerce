@@ -149,14 +149,6 @@
 	margin: 0;
 	/* Elimina el espacio exterior predeterminado */
 }
-.iledysile-cart-count {
-	position: fixed;
-    top: 18px;
-    right: 25px;
-    z-index: 1;
-    color: white;
-    pointer-events: none;
-}
 
 #iledysile-square-menu li.current-menu-item a {
 	text-decoration-thickness: from-font;
@@ -178,34 +170,47 @@
 	outline: none;
 }
 
-/* Hack para el carrito de la compra */
-.site-header-cart .cart-contents::after {
-    content: "" !important;
-    width: 20px !important;
-    height: 20px !important;
-    background-color: rgb(255, 140, 0) !important;
-    position: fixed;
-    top: 20px;
-    right: 20px;
+.iledysile-square-cart-button {
+	position: fixed;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 22px;
+    height: 22px;
+    background-color: #ff6600;
+	transition: 0.5s ease;
+    color: white;
+    font-size: 10pt;
+	top: 18px;
+    right: 25px;
 }
 
-.site-header-cart .cart-contents .count {
-	position: fixed;
-	top: 20px;
-    right: 200px;
+.iledysile-cart-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
+
 
 
 @media (min-width: 768px) and (hover: hover) {
     .iledysile-square-menu-button:hover {
         background-color: #c7b7db;
     }
+	.iledysile-square-cart-button:hover {
+		background-color: #f9a872;
+	}
 }
 
 @media (max-width: 768px), (hover: none) {
     .iledysile-square-menu-button:hover {
         background-color: #6B04FA;
     }
+	.iledysile-square-cart-button:hover {
+		background-color: #ff6600;
+	}
 }
 
 
