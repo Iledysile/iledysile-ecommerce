@@ -5,7 +5,8 @@ function iledysile_add_cart_count() {
     $cart_count = WC()->cart->get_cart_contents_count();
 
     // Solo mostrar el span si el contador es mayor a cero
-    // Muestra el número de productos en el carrito
+    // Muestra el número de productos en el carrito 
+    if ($cart_count > 0) {
         ?>
         <a href="/cart/">
             <div id="iledysile-square-cart-button" class="iledysile-square-cart-button">
