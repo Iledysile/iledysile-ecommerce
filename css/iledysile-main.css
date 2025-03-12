@@ -7,6 +7,9 @@
 /* Import elements to hide first: */
 @import url('iledysile-main-hide-elements.css');
 
+.woocommerce-cart .cart-empty {
+    display: none !important;
+}
 
 body {
     font-family: "Be Vietnam Pro", serif;
@@ -24,6 +27,13 @@ body:not(.home) .site-content {
     margin: 0;
 }
 
+/* Oculta el viejo carrito de la compra */
+.site-header-cart .cart-contents {
+    display: none;
+    position: absolute !important;
+    top: -10000px !important;
+}
+
 /* Eliminar los márgenes y hacer el contenido más ancho (version mobile) */
 @media (max-width: 768px) {
     .col-full {
@@ -33,9 +43,6 @@ body:not(.home) .site-content {
 }
 
 @media (min-width: 768px) {
-    .site-header-cart .cart-contents .count {
-        padding-left: 40% !important;
-    }
     .iledysile-menu {
         padding-left: 15px;
     }
