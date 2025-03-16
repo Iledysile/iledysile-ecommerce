@@ -1,0 +1,130 @@
+.iledysile-container-product-added {
+    right: -100%;
+    top: 0;
+    position: fixed;
+    width: 70vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    color: black !important;
+    transition: right 0.5s ease-in-out;
+}
+
+.iledysile-container-product-added.show {
+    right: 0;
+}
+
+.iledysile-first-row, 
+.iledysile-second-row, 
+.iledysile-third-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.iledysile-first-row {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.iledysile-second-row {
+    height: 40%;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.iledysile-third-row {
+    height: 40%;
+}
+
+.iledysile-col-left {
+    width: 20%;
+    background-color: transparent;
+    min-height: 100%;
+}
+
+.iledysile-col-right {
+    width: 80%;
+    background-color: #DBC794;
+}
+
+.iledysile-subrow-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.iledysile-tick {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.iledysile-subrow-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iledysile-col-left.second {
+    width: 20%;
+}
+
+.iledysile-product-thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+.iledysile-col-middle.second {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.iledysile-col-right.third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.iledysile-link {
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid black;
+    width: 80%;
+    text-align: center;
+}
+
+.iledysile-product-thumbnail {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover; 
+}
+
+.iledysile-close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.woocommerce-message {
+    position: relative; 
+    padding: 0 !important; 
+    border: none !important; 
+    background: none !important; 
+    box-shadow: none !important; 
+    margin: 0 !important;
+}
+
+.woocommerce-message::before {
+    display: none !important;
+}

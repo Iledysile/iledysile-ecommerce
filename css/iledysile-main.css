@@ -49,8 +49,7 @@ body:not(.home) .site-content {
 }
 
 nav#site-navigation {
-    position: fixed;
-    width: 90%;
+    display: none;
 }
 
 .site-header {

@@ -24,7 +24,7 @@ add_filter('nav_menu_css_class', 'resaltar_shop_y_categoria', 10, 3);
 
 add_filter( 'woocommerce_dropdown_variation_attribute_options_args', function( $args ) {
     // Verifica si el atributo es el correcto: 'attribute_size'
-    if ( isset( $args['attribute'] ) && 'size' === $args['attribute'] ) {
+    if ( isset( $args['attribute'] ) && 'pa_slug_size' === $args['attribute'] ) {
         // Cambia el texto de la opción por defecto
         $args['show_option_none'] = 'XS S M L';
     }

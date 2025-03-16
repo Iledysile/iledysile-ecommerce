@@ -37,6 +37,14 @@ function iledysile_enqueue_styles() {
             '1.0',
             'all'
         );
+
+        wp_enqueue_style(
+            'iledysile-add-to-cart-message-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-add-to-cart-message.css',
+            array(),
+            '1.0',
+            'all'
+        );
     }
 
     // Estilos específicos para la página de Kontakt

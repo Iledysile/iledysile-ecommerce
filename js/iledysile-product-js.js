@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
 
 //En el seleccionable de tallas, oculta la primera opción que contiene "XS S M L"
 jQuery(document).ready(function($) {
-    var selectElement = $('#size');
+    var selectElement = $('#pa_slug_size');
 
     var firstOption = selectElement.find('option:first-child');
     firstOption.attr('disabled', 'disabled').attr('selected', 'selected').hide();

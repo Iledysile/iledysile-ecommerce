@@ -1,2 +1,12 @@
+/*
+Theme Name:     Storefront Child
+Theme URI:      http://tudominio.com/storefront-child
+Description:    Tema hijo de Storefront
+Author:         Tu Nombre
+Author URI:     http://tudominio.com
+Template:       storefront
+Version:        1.0
+*/
+
 @import url("../storefront/style.css"); /* Importar los estilos del tema principal */
-@import url('css/iledysile-main.css');
+@import url('css/iledysile-main.css'); /* Importar estilos adicionales */
