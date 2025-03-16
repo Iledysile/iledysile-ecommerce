@@ -25,6 +25,13 @@ function iledysile_enqueue_scripts() {
             array('jquery'), 
             '1.0', 
             true);
+
+        wp_enqueue_script(
+            'iledysile-add-to-cart-message-js', 
+            get_stylesheet_directory_uri() . '/js/iledysile-add-to-cart-message-js.js', 
+            array('jquery'), 
+            '1.0', 
+            true);
     }
 
     /* wp_enqueue_script('iledysile-menu-web-scrolled-js', get_stylesheet_directory_uri() . '/js/iledysile-menu-web-scrolled-js.js', array(), '1.0', true); */

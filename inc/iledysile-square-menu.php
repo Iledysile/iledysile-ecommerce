@@ -1,5 +1,14 @@
 <?php
 
+function iledysile_register_menus() {
+    register_nav_menus(
+        array(
+            'iledysile-mobile-menu' => __('MiMenuIledysile', 'text-domain'),
+        )
+    );
+}
+add_action('after_setup_theme', 'iledysile_register_menus');
+
 // Agregar iledysile-square-menu personalizado
 function iledysile_add_square_menu() {
     ?>

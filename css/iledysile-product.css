@@ -91,7 +91,7 @@ input[type="range"]::-ms-thumb {
 }
 
 
-#size {
+#pa_slug_size {
     appearance: none;        /* Para la mayoría de los navegadores */
     -webkit-appearance: none; /* Para Safari y Chrome */
     -moz-appearance: none;    /* Para Firefox */
@@ -103,13 +103,12 @@ input[type="range"]::-ms-thumb {
     font-size: 16pt;
   }  
   /* Para quitar la flecha en Internet Explorer y Edge */
-  #size::-ms-expand {
+  #pa_slug_size::-ms-expand {
     display: none;
   }
-  #size option[value=""] {
+  #pa_slug_size option[value=""] {
     text-align: center; /* Centra el texto de la opción por defecto */
 }
-
   
 
 @media (min-width: 768px) {
