@@ -4,6 +4,7 @@ function iledysile_enqueue_styles() {
     wp_enqueue_style('storefront-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('storefront-child-style', get_stylesheet_uri(), array('storefront-style'));
     wp_enqueue_style('iledysile-square-menu-style', get_stylesheet_directory_uri() . '/css/iledysile-square-menu.css', ['storefront-child-style']);
+    wp_enqueue_style('iledysile-cart-count-style', get_stylesheet_directory_uri() . '/css/iledysile-cart-count.css', ['storefront-child-style']);
 
     /* Los CSS que NO dependen de una condición se declaran en el style.css raíz 
      (Ej: idy-main.cs, idy-main-hide-elements.css) */
@@ -39,8 +40,8 @@ function iledysile_enqueue_styles() {
         );
 
         wp_enqueue_style(
-            'iledysile-add-to-cart-message-style',
-            get_stylesheet_directory_uri() . '/css/iledysile-add-to-cart-message.css',
+            'iledysile-ajax-add-to-cart-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-ajax-add-to-cart.css',
             array(),
             '1.0',
             'all'

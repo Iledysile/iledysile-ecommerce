@@ -1,48 +1,45 @@
 <?php
 // Función para agregar el contador del carrito en el DOM
 function iledysile_add_cart_count() {
-    // Obtener el número de productos en el carrito
     $cart_count = WC()->cart->get_cart_contents_count();
-
-    // Solo mostrar el span si el contador es mayor a cero
-    // Muestra el número de productos en el carrito 
-    if ($cart_count > 0) {
-        ?>
-        <a href="/cart/">
+    ?>
+        <a href="<?php echo esc_url(wc_get_cart_url()); ?>">
             <div id="iledysile-square-cart-button" class="iledysile-square-cart-button">
                 <span id="iledysile-cart-count" class="iledysile-cart-count">
-                    <?php echo $cart_count; ?>
+                    <?php echo esc_html($cart_count); ?>
                 </span>
             </div>
         </a>
-        <?php
-    }
+    <?php
 }
+add_action('storefront_header', 'iledysile_add_cart_count', 20);
 
-// Agregar la función al encabezado
-add_action('storefront_header', 'iledysile_add_cart_count', 20); // Prioridad 20
-
-
-
+// Función para agregar el script que actualiza el contador del carrito
 function custom_cart_refresh_script_blocks() {
     ?>
     <script type="text/javascript">
         jQuery(function($){
+            if ($('.iledysile-cart-count').text() > 0) {
+                console.log('Hay productos en el carrito');
+                $('#iledysile-square-cart-button').show();
+            } else {
+                console.log('No hay productos en el carrito');
+                $('#iledysile-square-cart-button').hide();
+            }
             if ( typeof wp !== 'undefined' && wp.data ) {
                 // Escuchar cambios en el carrito con WooCommerce Blocks
                 wp.data.subscribe( function() {
                     const cart = wp.data.select('wc/store/cart').getCartData();
                     if ( cart ) {
+
                         const cartCount = cart.items.reduce((total, item) => total + item.quantity, 0);
 
-                        // Actualizar el texto del contador en el DOM
                         $('.iledysile-cart-count').text(cartCount);
 
-                        // Mostrar u ocultar el span según el valor de cartCount
                         if (cartCount > 0) {
-                            $('#iledysile-square-cart-button').show();  // Mostrar el span
+                            $('#iledysile-square-cart-button').show();  
                         } else {
-                            $('#iledysile-square-cart-button').hide();  // Ocultar el span si es 0
+                            $('#iledysile-square-cart-button').hide(); 
                         }
                     }
                 });
@@ -51,6 +48,4 @@ function custom_cart_refresh_script_blocks() {
     </script>
     <?php
 }
-add_action('wp_footer', 'custom_cart_refresh_script_blocks');
-
-
+add_action('storefront_header', 'custom_cart_refresh_script_blocks');
