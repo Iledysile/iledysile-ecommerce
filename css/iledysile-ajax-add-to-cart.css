@@ -1,18 +1,21 @@
+/* iledysile-ajax-add-to-cart.css */
+
 .iledysile-container-product-added {
-    right: -100%;
-    top: 0;
+    right: -100%; /* Comienza fuera de la pantalla */
+    top: 20px;
     position: fixed;
     width: 70vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    z-index: 1;
+    z-index: 9999 !important;
     color: black !important;
     transition: right 0.5s ease-in-out;
 }
 
 .iledysile-container-product-added.show {
     right: 0;
+    display: flex !important;
 }
 
 .iledysile-first-row, 
