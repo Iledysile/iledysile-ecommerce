@@ -48,10 +48,10 @@ jQuery(function ($) {
                     // Mostrar el div con animación
                     $('.iledysile-container-product-added').addClass('show');
 
-                    // Ocultarlo después de 5 segundos
+                    // Ocultarlo después de 7 segundos
                     setTimeout(function() {
                         $('.iledysile-container-product-added').removeClass('show');
-                    }, 5000);
+                    }, 7000);
 
                     // Actualizar el contador del carrito
                     $('#iledysile-cart-count').text(response.data.cart_count);
@@ -78,7 +78,7 @@ function updateFloatingCartInfo(data) {
     return '' +
             // Primera fila
             '<div class="iledysile-first-row">' +
-                '<div class="iledysile-col-left first">Col 1</div>' +
+                '<div class="iledysile-col-left first"></div>' +
                 '<div class="iledysile-col-right first">' +
                     '<button class="iledysile-close-btn">✖</button>' +
                 '</div>' +
@@ -86,7 +86,7 @@ function updateFloatingCartInfo(data) {
 
             // Segunda fila con dos subrows
             '<div class="iledysile-second-row">' +
-                '<div class="iledysile-col-left second">Col 1</div>' +
+                '<div class="iledysile-col-left second"></div>' +
                 '<div class="iledysile-col-right second">' +
 
                     // Primera subrow con el mensaje de confirmación
@@ -105,14 +105,14 @@ function updateFloatingCartInfo(data) {
 
                         // Segunda subcolumna: información del producto
                         '<div class="iledysile-subcol-middle">' +
-                            '<span class="iledysile-product-name"><a href="' + data.product_url + '">' + data.product_name + '</a></span><br>' +
-                            '<span class="iledysile-product-size">Talla: ' + data.product_size + '</span><br>' +
-                            '<span class="iledysile-product-quantity">Cantidad: ' + data.product_quantity + '</span>' +
+                            '<span class="iledysile-product-name"><a href="' + data.product_url + '">' + data.product_name.toUpperCase() + '</a></span><br>' +
+                            '<span class="iledysile-product-size">GRÖSSE: ' + data.product_size.toUpperCase() + '</span><br>' +
+                            '<span class="iledysile-product-quantity">MENGE: ' + data.product_quantity + '</span>' +
                         '</div>' +
 
                         // Tercera subcolumna: botón de eliminar producto
                         '<div class="iledysile-subcol-right">' +
-                            '<span class="iledysile-remove-product">✖</span>' +
+                            '<button class="iledysile-remove-product" data-product-id="' + data.product_id + '">✖</button>' +
                         '</div>' +
 
                     '</div>' + // Cierre de la subrow de detalles
@@ -122,12 +122,16 @@ function updateFloatingCartInfo(data) {
 
             // Tercera fila con enlaces de navegación
             '<div class="iledysile-third-row">' +
-                '<div class="iledysile-col-left third">Col 1</div>' +
+                '<div class="iledysile-col-left third"></div>' +
                 '<div class="iledysile-col-right third">' +
-                    '<a href="' + data.shop_url + '" class="iledysile-link">ZUM SHOP</a>' + // Tienda
-                    '<a href="' + data.cart_url + '" class="iledysile-link">WARENKORB</a>' + // Carrito
-                    '<a href="' + data.checkout_url + '" class="iledysile-link">ZUR KASSE</a>' + // Checkout
+                    '<a href="' + data.shop_url + '" class="iledysile-link first">ZUM SHOP</a>' + // Tienda
+                    '<a href="' + data.cart_url + '" class="iledysile-link second">WARENKORB</a>' + // Carrito
+                    '<a href="' + data.checkout_url + '" class="iledysile-link third">ZUR KASSE</a>' + // Checkout
                 '</div>' +
             '</div>';
 }
 
+// Cerrar el div con el botón de cerrar
+jQuery(document).on("click", ".iledysile-close-btn", function () {
+    jQuery(".iledysile-container-product-added").removeClass("show");
+});
