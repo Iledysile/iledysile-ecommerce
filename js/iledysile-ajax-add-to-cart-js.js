@@ -48,9 +48,9 @@ jQuery(function($) {
                     $('.iledysile-container-product-added').addClass('show');
 
                     // Ocultarlo después de 7 segundos
-                    // setTimeout(function() {
-                    //     $('.iledysile-container-product-added').removeClass('show');
-                    // }, 7000);
+                    setTimeout(function() {
+                        $('.iledysile-container-product-added').removeClass('show');
+                    }, 6000);
 
                     // Actualizar el contador del carrito
                     $('#iledysile-cart-count').text(response.data.cart_count);
