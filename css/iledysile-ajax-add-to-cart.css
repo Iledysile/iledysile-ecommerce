@@ -167,3 +167,20 @@
 .woocommerce-message::before {
     display: none !important;
 }
+
+@media (max-width: 768px) {
+	.iledysile-container-product-added {
+		right: -150%;
+		width: 150%;
+	}
+    .iledysile-product-thumbnail {
+        width: clamp(6.25vw, 34vw, 140px);
+        height: clamp(15vh, 22vh, 185px);
+    }
+    .iledysile-remove-product {
+        display: none;
+    }
+    .iledysile-tick {
+        margin-right: 0;
+    }
+}
