@@ -1,38 +1,41 @@
+/* iledysile-ajax-add-to-cart.css */
+
 .iledysile-container-product-added {
     right: -100%;
+    /* Comienza fuera de la pantalla */
     top: 0;
     position: fixed;
-    width: 70vh;
+    width: 50%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    z-index: 1;
+    z-index: 1 !important;
     color: black !important;
     transition: right 0.5s ease-in-out;
 }
 
 .iledysile-container-product-added.show {
     right: 0;
+    display: flex !important;
 }
 
-.iledysile-first-row, 
-.iledysile-second-row, 
+.iledysile-first-row,
+.iledysile-second-row,
 .iledysile-third-row {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    justify-content: flex-end;
 }
 
 .iledysile-first-row {
     display: flex;
     height: 20%;
-    width: 100%;
-    border-bottom: 2px solid black;
+
 }
 
 .iledysile-second-row {
     height: 40%;
-    border-bottom: 2px solid black;
     display: flex;
     flex-direction: row;
 }
@@ -42,21 +45,35 @@
 }
 
 .iledysile-col-left {
-    width: 20%;
+    width: 19%;
     background-color: transparent;
     min-height: 100%;
+    border-bottom: 2px solid black;
 }
 
 .iledysile-col-right {
-    width: 80%;
+    width: 67%;
     background-color: #DBC794;
+    border-bottom: 2px solid black;
+}
+
+.iledysile-col-left.third {
+    border-bottom: unset;
+}
+
+.iledysile-col-right.third {
+    border-bottom: unset;
+}
+
+.iledysile-message {
+    padding: 6%;
+    font-size: clamp(14px, 1.1vw, 30px);
 }
 
 .iledysile-subrow-message {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
 }
 
 .iledysile-tick {
@@ -68,15 +85,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.iledysile-col-left.second {
-    width: 20%;
-}
-
-.iledysile-product-thumbnail {
-    width: 100%;
-    height: auto;
+    font-size: clamp(14px, 1.1vw, 30px);
+    padding: 4%;
 }
 
 .iledysile-col-middle.second {
@@ -90,41 +100,87 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    justify-content: center;
 }
 
 .iledysile-link {
     text-decoration: none;
-    font-weight: bold;
-    border: 1px solid black;
-    width: 80%;
+    border: 2px solid black;
+    background-color: #DBC794;
+    width: 52%;
     text-align: center;
+    height: 60px;
+    align-content: center;
+    transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
 }
 
+.iledysile-link:hover {
+    background-color: #F1DEFC;
+    border: 2px solid #F1DEFC;
+    color: #4f4f4f;
+}
+
+.iledysile-link.second {
+    margin: 3%;
+}
+
+.iledysile-remove-product {
+    color: black;
+    background-color: transparent;
+    transition: 0.5s ease;
+}
+
+.iledysile-remove-product:hover {
+    background-color: transparent !important;
+    color: #b9b9b9 !important;
+}
 .iledysile-product-thumbnail {
-    width: 100px !important;
-    height: 100px !important;
-    object-fit: cover; 
+    width: clamp(6.25vw, 7vw, 140px);
+    height: clamp(15vh, 17vh, 185px);
+    object-fit: cover;
 }
 
 .iledysile-close-btn {
-    font-size: 24px;
+    color: black !important;
+    font-size: 40px;
+    font-weight: lighter;
     cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    background: none;
-    border: none;
+    padding: 24px;
+    transition: 0.5s ease;
+    background-color: transparent;
+}
+
+.iledysile-close-btn:hover {
+    background-color: transparent !important;
+    color: #b9b9b9 !important;
 }
 
 .woocommerce-message {
-    position: relative; 
-    padding: 0 !important; 
-    border: none !important; 
-    background: none !important; 
-    box-shadow: none !important; 
+    position: relative;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
     margin: 0 !important;
 }
 
 .woocommerce-message::before {
     display: none !important;
+}
+
+@media (max-width: 768px) {
+	.iledysile-container-product-added {
+		right: -150%;
+		width: 150%;
+	}
+    .iledysile-product-thumbnail {
+        width: clamp(6.25vw, 34vw, 140px);
+        height: clamp(15vh, 22vh, 185px);
+    }
+    .iledysile-remove-product {
+        display: none;
+    }
+    .iledysile-tick {
+        margin-right: 0;
+    }
 }

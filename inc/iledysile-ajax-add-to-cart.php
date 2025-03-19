@@ -4,70 +4,75 @@
 function add_ajax_cart_button() {
     global $product;
     echo '<button type="button" class="ajax_add_to_cart button alt" data-product_id="' . esc_attr($product->get_id()) . '">
-        Añadir al carrito AJAX
+        In den Warkenkorb (AJAX)
     </button>
     <div class="ajax-response"></div>';
 }
 add_action('woocommerce_after_add_to_cart_button', 'add_ajax_cart_button');
 
 function woocommerce_ajax_add_to_cart() {
-    // Obtener el ID del producto
-    $product_id = absint($_POST['product_id']);
-    // Inicializar la talla por defecto
-    $size = '';
-    
-    // Verificar si la talla ha sido seleccionada
-    if (isset($_REQUEST['size'])) {
-        $size = sanitize_text_field($_REQUEST['size']); // Obtiene la talla seleccionada
+    // Obtener el ID del producto desde POST
+    $product_id = isset($_POST['product_id']) ? absint($_POST['product_id']) : 0;
+    $size = isset($_POST['size']) ? sanitize_text_field($_POST['size']) : '';
+    $quantity = isset($_POST['quantity']) ? absint($_POST['quantity']) : 1;
+
+    if (!$product_id || $quantity < 1) {
+        wp_send_json_error(array('message' => 'Datos inválidos.'));
+        wp_die();
     }
 
-    if ($product_id) {
-        // Obtener el producto (variable o simple)
-        $product = wc_get_product($product_id);
-        
-        // Verificar si el producto es de tipo variable
-        if ($product->is_type('variable')) {
-            // Obtener el ID de la variación según el atributo de talla
-            $variation_id = get_matching_variation($product, $size);
-            
-            if ($variation_id) {
-                // Si se encuentra la variación, se añade al carrito
-                $added = WC()->cart->add_to_cart($product_id, 1, $variation_id); 
-            } else {
-                wp_send_json_error(array('message' => 'La talla seleccionada no es válida.'));
-                wp_die();
-            }
-        } else {
-            // Si el producto no es variable, añadirlo de la manera normal
-            $added = WC()->cart->add_to_cart($product_id);
-        }
-        
-        if ($added) {
-            // Obtener el número de productos en el carrito
-            $cart_count = WC()->cart->get_cart_contents_count();
+    // Obtener el producto (variable o simple)
+    $product = wc_get_product($product_id);
 
-            wp_send_json_success(array(
-                'product_name'  => $product->get_name(),
-                'product_size'  => $size,
-                'product_image' => wp_get_attachment_image_src($product->get_image_id(), 'thumbnail')[0], // URL de la miniatura
-                'cart_count'    => $cart_count,
-            ));
+    if (!$product) {
+        wp_send_json_error(array('message' => 'Producto no encontrado.'));
+        wp_die();
+    }
+
+    if ($product->is_type('variable')) {
+        $variation_id = get_matching_variation($product, $size);
+        
+        if ($variation_id) {
+            $added = WC()->cart->add_to_cart($product_id, $quantity, $variation_id);
         } else {
-            wp_send_json_error(array('message' => 'No se pudo añadir el producto.'));
+            wp_send_json_error(array('message' => 'La talla seleccionada no es válida.'));
+            wp_die();
         }
+    } else {
+        $added = WC()->cart->add_to_cart($product_id, $quantity);
+    }
+
+    if ($added) {
+        $cart_count = WC()->cart->get_cart_contents_count();
+
+        // Obtener las URLs de las páginas de WooCommerce
+        $shop_url = esc_url(wc_get_page_permalink('shop'));
+        $cart_url = esc_url(wc_get_cart_url());
+        $checkout_url = esc_url(wc_get_checkout_url());
+
+        wp_send_json_success(array(
+            'product_name'  => $product->get_name(),
+            'product_size'  => $size,
+            'product_image' => wp_get_attachment_image_src($product->get_image_id(), 'thumbnail')[0],
+            'product_quantity' => $quantity,
+            'cart_count'    => $cart_count,
+            'shop_url'         => $shop_url,
+            'cart_url'         => $cart_url,
+            'checkout_url'     => $checkout_url,
+            'product_id' => $product_id
+        ));
+    } else {
+        wp_send_json_error(array('message' => 'No se pudo añadir el producto.'));
     }
 
     wp_die();
 }
 add_action('wp_ajax_woocommerce_ajax_add_to_cart', 'woocommerce_ajax_add_to_cart');
-add_action('wp_ajax_nopriv_woocommerce_ajax_add_to_cart', 'woocommerce_ajax_add_to_cart'); // Soporta usuarios no logueados
+add_action('wp_ajax_nopriv_woocommerce_ajax_add_to_cart', 'woocommerce_ajax_add_to_cart');
+
 
 add_action('wp_footer', function() {
-    echo '<div class="floating-cart-info" style="
-        position: fixed; right: 20px; top: 20px; 
-        background: #fff; padding: 15px; border: 1px solid #ddd; 
-        display: none; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);">
-    </div>';
+    echo '<div class="iledysile-container-product-added"></div>';
 });
 
 // Función para obtener la variación basada en la talla seleccionada

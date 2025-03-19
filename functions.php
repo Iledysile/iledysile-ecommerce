@@ -18,3 +18,4 @@ require_once get_stylesheet_directory() . '/inc/iledysile-product-functions.php'
 require_once get_stylesheet_directory() . '/inc/iledysile-woocommerce-image-sizes.php';
 require_once get_stylesheet_directory() . '/inc/iledysile-add-to-cart-message.php';
 require_once get_stylesheet_directory() . '/inc/iledysile-ajax-add-to-cart.php';
+require_once get_stylesheet_directory() . '/inc/iledysile-ajax-remove-from-cart.php';
