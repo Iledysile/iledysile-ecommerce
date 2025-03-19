@@ -106,24 +106,34 @@
 .iledysile-link {
     text-decoration: none;
     border: 2px solid black;
+    background-color: #DBC794;
     width: 52%;
     text-align: center;
     height: 60px;
     align-content: center;
-    transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
+    transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+}
+
+.iledysile-link:hover {
+    background-color: #F1DEFC;
+    border: 2px solid #F1DEFC;
+    color: #4f4f4f;
 }
 
 .iledysile-link.second {
     margin: 3%;
 }
 
-.iledysile-link:hover {
-    background-color: #F1DEFC;
-    border: 0;
-    color: #4f4f4f;
-    transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
+.iledysile-remove-product {
+    color: black;
+    background-color: transparent;
+    transition: 0.5s ease;
 }
 
+.iledysile-remove-product:hover {
+    background-color: transparent !important;
+    color: #b9b9b9 !important;
+}
 .iledysile-product-thumbnail {
     width: clamp(6.25vw, 7vw, 140px);
     height: clamp(15vh, 17vh, 185px);

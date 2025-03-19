@@ -1,8 +1,8 @@
 // iledysile-ajax-add-to-cart-js.js
 
 // Función para agregar al carrito con AJAX
-jQuery(function ($) {
-    $('.ajax_add_to_cart').on('click', function (e) {
+jQuery(function($) {
+    $('.ajax_add_to_cart').on('click', function(e) {
         e.preventDefault();
 
         var $button = $(this);
@@ -28,16 +28,15 @@ jQuery(function ($) {
                 action: 'woocommerce_ajax_add_to_cart',
                 product_id: product_id,
                 size: size,
-                quantity: quantity,
+                quantity: quantity
             },
-            beforeSend: function () {
+            beforeSend: function() {
                 $button.prop('disabled', true).text('Wird hinzugefügt...');
             },
-            success: function (response) {
+            success: function(response) {
                 if (response.success) {
-                    console.log('Respuesta AJAX:', response);
 
-                    $button.text('Hinzugefügt ✅').delay(2000).queue(function (next) {
+                    $button.text('Hinzugefügt ✅').delay(2000).queue(function(next) {
                         $(this).text('In den Warkenkorb').prop('disabled', false);
                         next();
                     });
@@ -49,9 +48,9 @@ jQuery(function ($) {
                     $('.iledysile-container-product-added').addClass('show');
 
                     // Ocultarlo después de 7 segundos
-                    setTimeout(function() {
-                        $('.iledysile-container-product-added').removeClass('show');
-                    }, 7000);
+                    // setTimeout(function() {
+                    //     $('.iledysile-container-product-added').removeClass('show');
+                    // }, 7000);
 
                     // Actualizar el contador del carrito
                     $('#iledysile-cart-count').text(response.data.cart_count);
@@ -74,6 +73,7 @@ jQuery(function ($) {
 });
 
 
+// Función para actualizar el HTML del div flotante
 function updateFloatingCartInfo(data) {
     return '' +
             // Primera fila
@@ -116,7 +116,6 @@ function updateFloatingCartInfo(data) {
                         '</div>' +
 
                     '</div>' + // Cierre de la subrow de detalles
-
                 '</div>' + // Cierre de la columna derecha
             '</div>' + // Cierre de la segunda fila
 
@@ -124,9 +123,9 @@ function updateFloatingCartInfo(data) {
             '<div class="iledysile-third-row">' +
                 '<div class="iledysile-col-left third"></div>' +
                 '<div class="iledysile-col-right third">' +
-                    '<a href="' + data.shop_url + '" class="iledysile-link first">ZUM SHOP</a>' + // Tienda
-                    '<a href="' + data.cart_url + '" class="iledysile-link second">WARENKORB</a>' + // Carrito
-                    '<a href="' + data.checkout_url + '" class="iledysile-link third">ZUR KASSE</a>' + // Checkout
+                    '<a href="' + data.shop_url + '" class="iledysile-link first">ZUM SHOP</a>' + 
+                    '<a href="' + data.cart_url + '" class="iledysile-link second">WARENKORB</a>' + 
+                    '<a href="' + data.checkout_url + '" class="iledysile-link third">ZUR KASSE</a>' + 
                 '</div>' +
             '</div>';
 }

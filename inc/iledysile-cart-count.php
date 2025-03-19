@@ -20,10 +20,8 @@ function custom_cart_refresh_script_blocks() {
     <script type="text/javascript">
         jQuery(function($){
             if ($('.iledysile-cart-count').text() > 0) {
-                console.log('Hay productos en el carrito');
                 $('#iledysile-square-cart-button').show();
             } else {
-                console.log('No hay productos en el carrito');
                 $('#iledysile-square-cart-button').hide();
             }
             if ( typeof wp !== 'undefined' && wp.data ) {

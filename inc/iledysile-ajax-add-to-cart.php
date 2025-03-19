@@ -58,7 +58,8 @@ function woocommerce_ajax_add_to_cart() {
             'cart_count'    => $cart_count,
             'shop_url'         => $shop_url,
             'cart_url'         => $cart_url,
-            'checkout_url'     => $checkout_url
+            'checkout_url'     => $checkout_url,
+            'product_id' => $product_id
         ));
     } else {
         wp_send_json_error(array('message' => 'No se pudo añadir el producto.'));
