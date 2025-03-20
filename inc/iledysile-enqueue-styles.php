@@ -59,16 +59,25 @@ function iledysile_enqueue_styles() {
         );
     }
 
-        // Estilos específicos para la página de Über
-        if (is_page('uber')) {
-            wp_enqueue_style(
-                'iledysile-uber-style',
-                get_stylesheet_directory_uri() . '/css/iledysile-uber.css',
-                array(),
-                '1.0',
-                'all'
-            );
-        }
+    // Estilos específicos para la página de Über
+    if (is_page('uber')) {
+        wp_enqueue_style(
+            'iledysile-uber-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-uber.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
+    if (is_cart()) {
+        wp_enqueue_style(
+            'iledysile-cart-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-cart.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
 
     
 }

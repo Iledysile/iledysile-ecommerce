@@ -2,6 +2,9 @@
 
 // Función para agregar al carrito con AJAX
 jQuery(function($) {
+    // Ocultarlo después de X segundos
+    var hideTimeout = 6000;
+
     $('.ajax_add_to_cart').on('click', function(e) {
         e.preventDefault();
 
@@ -47,10 +50,9 @@ jQuery(function($) {
                     // Mostrar el div con animación
                     $('.iledysile-container-product-added').addClass('show');
 
-                    // Ocultarlo después de 7 segundos
                     setTimeout(function() {
                         $('.iledysile-container-product-added').removeClass('show');
-                    }, 6000);
+                    }, hideTimeout);
 
                     // Actualizar el contador del carrito
                     $('#iledysile-cart-count').text(response.data.cart_count);
@@ -110,10 +112,10 @@ function updateFloatingCartInfo(data) {
                             '<span class="iledysile-product-quantity">MENGE: ' + data.product_quantity + '</span>' +
                         '</div>' +
 
-                        // Tercera subcolumna: botón de eliminar producto
-                        '<div class="iledysile-subcol-right">' +
-                            '<button class="iledysile-remove-product" data-product-id="' + data.product_id + '">✖</button>' +
-                        '</div>' +
+                        // // Tercera subcolumna: botón de eliminar producto
+                        // '<div class="iledysile-subcol-right">' +
+                        //     '<button class="iledysile-remove-product" data-product-id="' + data.product_id + '">✖</button>' +
+                        // '</div>' +
 
                     '</div>' + // Cierre de la subrow de detalles
                 '</div>' + // Cierre de la columna derecha

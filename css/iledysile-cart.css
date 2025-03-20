@@ -1,0 +1,41 @@
+
+body:not(.home) .site-content {
+    margin-top: 0 !important;
+}
+.col-full {
+    padding: 0 !important;
+}
+.page-id-7 h1.entry-title {
+    position: absolute; 
+    left: -9999px;
+}
+.entry-header {
+    position: absolute; 
+    left: -9999px;
+}
+.site-main {
+    margin-bottom: 0 !important;
+}
+.is-large.wc-block-cart {
+    margin-bottom: 0 !important;
+}
+.iledysile-cart {
+    padding-right: 0 !important;
+}
+.hentry {
+    margin-bottom: 0 !important;
+}
+.iledysile-col-right {
+    background-color: #FFF6CD;
+    padding-left: 2.2641509434%;
+    padding-right: 2.2641509434%;
+}
+
+.iledysile-col-right-sumary-block {
+    margin-top: 8em;
+}
+.iledysile-fake-header {
+    font-size: 2.617924em;
+    padding-top: 1em;
+    padding-left: 0.5em;
+}
