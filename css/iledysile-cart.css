@@ -1,4 +1,9 @@
 
+@import url('iledysile-spinner.css');
+
+body {
+    background-color: #F6EFDB;
+}
 body:not(.home) .site-content {
     margin-top: 0 !important;
 }
@@ -30,7 +35,9 @@ body:not(.home) .site-content {
     padding-left: 2.2641509434%;
     padding-right: 2.2641509434%;
 }
-
+.iledysile-col-left {
+    height: 100vh;
+}
 .iledysile-col-right-sumary-block {
     margin-top: 8em;
 }
@@ -38,4 +45,27 @@ body:not(.home) .site-content {
     font-size: 2.617924em;
     padding-top: 1em;
     padding-left: 0.5em;
+}
+.iledysile-cart-empty {
+    height: 100vh;
+}
+.iledysile-cart-empty-p {
+    padding-left: 1.8em;
+}
+.iledysile-submit-cart-btn {
+    margin: 5% auto 16px !important;
+    width: 56% !important;
+}
+.iledysile-submit-cart-btn a {
+    background-color: #FFF6CD !important;
+    border: 2px solid #000000 !important;
+    color: #000000 !important;
+    transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
+    text-decoration: none !important;
+    height: 60px !important; 
+}
+.iledysile-submit-cart-btn a:hover {
+    background-color: #F1DEFC !important;
+    border: 2px solid #F1DEFC !important;
+    color: #4f4f4f !important;
 }
