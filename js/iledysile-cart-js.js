@@ -1,26 +1,26 @@
 // Función para ajustar la altura de la columna izquierda en la página del carrito
 document.addEventListener("DOMContentLoaded", function () {
 
-    function ajustarAltura() {
+    function adjustHeight() {
 
-        const tablaCarrito = document.querySelector(".iledysile-cart-items");
-        const columnaIzquierda = document.querySelector(".iledysile-col-left");
+        const cartTable = document.querySelector(".iledysile-cart-items");
+        const leftColumn = document.querySelector(".iledysile-col-left");
 
-        if (!tablaCarrito) {
-            setTimeout(ajustarAltura, 200); // Reintenta en 200ms
+        if (!cartTable) {
+            setTimeout(adjustHeight, 200); // Reintenta en 200ms
             return;
         }
-        if (!columnaIzquierda) {
+        if (!leftColumn) {
             return;
         }
 
-        const alturaTabla = tablaCarrito.offsetHeight;
-        const alturaVentana = window.innerHeight - 100; // 100px de margen
+        const tableHeight = cartTable.offsetHeight;
+        const windowHeight = window.innerHeight - 100; // 100px de margen
 
-        if (alturaTabla > alturaVentana) {
-            columnaIzquierda.style.height = "100%";
+        if (tableHeight > windowHeight) {
+            leftColumn.style.height = "100%";
         } else {
-            columnaIzquierda.style.height = "100vh";
+            leftColumn.style.height = "100vh";
         }
     }
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new MutationObserver(() => {
         if (document.querySelector(".iledysile-cart-items")) {
             observer.disconnect(); // Dejar de observar cuando lo encuentre
-            ajustarAltura();
+            adjustHeight();
         }
     });
 
@@ -36,17 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // También ejecutar al redimensionar la ventana
     window.addEventListener("resize", function () {
-        ajustarAltura();
+        adjustHeight();
     });
 
     // Observar cambios en la tabla para detectar eliminación de productos
-    const carritoObserver = new MutationObserver(() => {
-        ajustarAltura();
+    const cartObserver = new MutationObserver(() => {
+        adjustHeight();
     });
 
-    const tablaCarrito = document.querySelector(".iledysile-cart-items");
-    if (tablaCarrito) {
-        carritoObserver.observe(tablaCarrito, { childList: true, subtree: true });
+    const cartTable = document.querySelector(".iledysile-cart-items");
+    if (cartTable) {
+        cartObserver.observe(cartTable, { childList: true, subtree: true });
     }
 });
 
@@ -58,5 +58,5 @@ window.addEventListener('load', function() {
         setTimeout(() => {
             spinner.style.display = 'none'; 
         }, 300); // Tiempo para que ocurra la transición de opacidad
-    }, 400); // Retardo de 500ms para asegurarnos de que la página cargue correctamente
+    }, 400); // Retardo de 400ms para asegurarnos de que la página cargue correctamente
 });
