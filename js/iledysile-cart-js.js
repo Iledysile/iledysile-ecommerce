@@ -75,5 +75,5 @@ window.addEventListener('load', function() {
         setTimeout(() => {
             spinner.style.display = 'none'; 
         }, 300); // Tiempo para que ocurra la transición de opacidad
-    }, 1000); // Retardo en ms para asegurarnos de que la página cargue correctamente
+    }, 600); // Retardo en ms para asegurarnos de que la página cargue correctamente
 });

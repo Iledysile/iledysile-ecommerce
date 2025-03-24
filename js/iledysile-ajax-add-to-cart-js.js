@@ -3,7 +3,7 @@
 // Función para agregar al carrito con AJAX
 jQuery(function($) {
     // Ocultarlo después de X segundos
-    var hideTimeout = 60000;
+    var hideTimeout = 6000;
 
     $('.ajax_add_to_cart').on('click', function(e) {
         e.preventDefault();
