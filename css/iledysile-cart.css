@@ -26,10 +26,18 @@ body:not(.home) .site-content {
 }
 .iledysile-cart {
     padding-right: 0 !important;
+    text-transform: uppercase !important;
 }
 .hentry {
     margin-bottom: 0 !important;
 }
+.iledysile-cart-items {
+    padding-left: 2%;
+}
+.iledysile-address-block .wc-block-components-totals-shipping__change-address__link {
+    color: #000000 !important;
+}
+
 .iledysile-col-right {
     background-color: #FFF6CD;
     padding-left: 2.2641509434%;
@@ -37,9 +45,10 @@ body:not(.home) .site-content {
 }
 .iledysile-col-left {
     height: 100vh;
+    padding-left: 1%;
 }
 .iledysile-col-right-sumary-block {
-    margin-top: 8em;
+    margin-top: 10.5em;
 }
 .iledysile-fake-header {
     font-size: 2.617924em;
@@ -57,9 +66,9 @@ body:not(.home) .site-content {
     width: 56% !important;
 }
 .iledysile-submit-cart-btn a {
-    background-color: #FFF6CD !important;
-    border: 2px solid #000000 !important;
-    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: 2px solid #6B04FA !important;
+    color: #ff6600 !important;
     transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
     text-decoration: none !important;
     height: 60px !important; 
@@ -68,4 +77,52 @@ body:not(.home) .site-content {
     background-color: #F1DEFC !important;
     border: 2px solid #F1DEFC !important;
     color: #4f4f4f !important;
+}
+
+.iledysile-col-right-sumary-block input[type="text"] {
+    border: 0 !important;
+    border-bottom: 2px solid #000000 !important;
+    background-color: #FFF6CD !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.iledysile-col-right-sumary-block select {
+    background-color: #FFF6CD !important;
+}
+
+.iledysile-coupon-form button {
+    background-color: #FFF6CD !important;
+    border: 2px solid #000000 !important;
+    color: #000000 !important;
+    transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
+    text-decoration: none !important;
+}
+
+.iledysile-coupon-form button:hover{
+    background-color: #F1DEFC !important;
+    border: 2px solid #F1DEFC !important;
+    color: #4f4f4f !important;
+}
+
+label[for="wc-block-components-totals-coupon__input-0"] {
+    display: none;
+}
+
+#wc-block-components-totals-coupon__input-0:focus::placeholder {
+    color: #808080; 
+    opacity: 1; 
+}
+
+#wc-block-components-totals-coupon__input-0 {
+    height: 48px !important;
+    line-height: 48px !important; 
+    padding: 0 10px !important; 
+    box-sizing: border-box !important; 
+}
+
+#wc-block-components-totals-coupon__input-0::placeholder {
+    line-height: 48px !important; 
+    padding: 0 !important; 
+    color: #808080; 
 }

@@ -50,6 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Función para agregar un placeholder al campo de cupón
+document.addEventListener("DOMContentLoaded", function() {
+    var observer = new MutationObserver(function() {
+        var couponInput = document.querySelector('#wc-block-components-totals-coupon__input-0');
+        if (couponInput) {
+            couponInput.setAttribute('placeholder', 'CODE EINFÜGEN');
+        }
+    });
+
+    // Observar el cuerpo del documento para detectar cambios
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+});
+
+
 // Función para mostrar el spinner al cargar la página
 window.addEventListener('load', function() {
     const spinner = document.getElementById('loading-spinner');
@@ -58,5 +75,5 @@ window.addEventListener('load', function() {
         setTimeout(() => {
             spinner.style.display = 'none'; 
         }, 300); // Tiempo para que ocurra la transición de opacidad
-    }, 400); // Retardo de 400ms para asegurarnos de que la página cargue correctamente
+    }, 600); // Retardo en ms para asegurarnos de que la página cargue correctamente
 });
