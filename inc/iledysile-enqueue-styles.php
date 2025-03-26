@@ -79,6 +79,16 @@ function iledysile_enqueue_styles() {
         );
     }
 
+    if (is_checkout()) {
+        wp_enqueue_style(
+            'iledysile-checkout-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-checkout.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
+
     
 }
 
