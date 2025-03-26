@@ -55,5 +55,14 @@ function iledysile_enqueue_scripts() {
             '1.0', 
             true);
     }
+
+    if (is_checkout()) { 
+        wp_enqueue_script(
+            'iledysile-checkout-js', 
+            get_stylesheet_directory_uri() . '/js/iledysile-checkout-js.js', 
+            array('jquery'),
+            '1.0', 
+            true);
+    }
 }
 add_action('wp_enqueue_scripts', 'iledysile_enqueue_scripts');

@@ -1,0 +1,48 @@
+@import url('iledysile-spinner.css');
+
+body {
+    text-transform: uppercase;
+    background-color: #F6EFDB;
+}
+body:not(.home) .site-content {
+    margin-top: 0 !important;
+}
+.iledysile-checkout {
+    padding-top: 0 !important; 
+}
+.iledysile-col-left {
+    padding-left: 15%;
+}
+.iledysile-col-left input[type="text"], 
+.iledysile-col-left input[type="email"],
+.iledysile-col-left input[type="tel"]{
+    border: 0 !important;
+    border-bottom: 2px solid #000000 !important;
+    background-color: #F6EFDB !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+.iledysile-col-left select {
+    background-color: #F6EFDB !important;
+}
+.iledysile-col-right {
+    margin-top: 10.5em !important;
+}
+.iledysile-square-menu-logo {
+    position: fixed;
+}
+
+.entry-header {
+    position: absolute; 
+    left: -9999px;
+}
+
+.entry-title {
+    position: absolute;
+    left: -9999px;
+}
+
+.iledysile-fake-header {
+    font-size: 2.617924em;
+    padding-top: 1em;
+}
