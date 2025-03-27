@@ -1,6 +1,6 @@
 
 @import url('iledysile-spinner.css');
-
+@import url('iledysile-cart-hide-elements.css');
 body {
     background-color: #F6EFDB;
 }
@@ -12,14 +12,6 @@ body:not(.home) .site-content {
 }
 .iledysile-square-menu-logo {
     position: fixed;
-}
-.page-id-7 h1.entry-title {
-    position: absolute; 
-    left: -9999px;
-}
-.entry-header {
-    position: absolute; 
-    left: -9999px;
 }
 .site-main {
     margin-bottom: 0 !important;
@@ -108,24 +100,7 @@ body:not(.home) .site-content {
     color: #4f4f4f !important;
 }
 
-label[for="wc-block-components-totals-coupon__input-0"] {
-    display: none;
-}
-
 #wc-block-components-totals-coupon__input-0:focus::placeholder {
     color: #808080; 
     opacity: 1; 
-}
-
-#wc-block-components-totals-coupon__input-0 {
-    height: 48px !important;
-    line-height: 48px !important; 
-    padding: 0 10px !important; 
-    box-sizing: border-box !important; 
-}
-
-#wc-block-components-totals-coupon__input-0::placeholder {
-    line-height: 48px !important; 
-    padding: 0 !important; 
-    color: #808080; 
 }

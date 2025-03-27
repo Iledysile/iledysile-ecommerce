@@ -1,0 +1,15 @@
+.entry-header {
+    position: absolute; 
+    left: -9999px;
+}
+.entry-title {
+    position: absolute;
+    left: -9999px;
+}
+
+.iledysile-address-block .wc-block-components-address-form__state {
+    display: none;
+}
+.wc-block-components-validation-error {
+    display: none;
+}
