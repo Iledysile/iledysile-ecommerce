@@ -142,6 +142,20 @@
     margin: 3%;
 }
 
+.iledysile-link.third {
+    background-color: #000000 !important;
+    border: 2px solid #000000 !important;
+    color: #ffffff !important;
+    transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
+    text-decoration: none !important;
+    height: 60px !important; 
+}
+
+.iledysile-link.third:hover {
+    background-color: #101010 !important;
+    color: #ffffff !important;
+}
+
 .iledysile-remove-product {
     color: black;
     background-color: transparent;
