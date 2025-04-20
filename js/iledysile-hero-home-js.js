@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function setupAnimations() {
         gsap.to(".hero__title-bg--front", {
             yPercent: -5,
-            color: 'yellow',
+            color: 'rgb(255 106 105)',
             scale: 2,
             scrollTrigger: {
                 trigger: ".hero",
