@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function setupAnimations() {
         gsap.to(".hero__title-bg--front", {
-            yPercent: -5,
-            color: 'rgb(255 106 105)',
+            color: 'transparent', // asegúrate que sea transparente
+            "-webkit-text-stroke": "1px rgb(255, 106, 105)", // el borde que quieres
             scale: 2,
             scrollTrigger: {
                 trigger: ".hero",

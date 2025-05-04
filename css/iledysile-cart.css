@@ -29,8 +29,8 @@ body:not(.home) .site-content {
 .iledysile-cart-items {
     padding-left: 2%;
 }
-.iledysile-address-block .wc-block-components-totals-shipping__change-address__link {
-    color: #000000 !important;
+.iledysile-address-block {
+    display: none;
 }
 
 .iledysile-col-right {
@@ -52,6 +52,7 @@ body:not(.home) .site-content {
 }
 .iledysile-cart-empty {
     height: 100vh;
+    padding-left: 15%;
 }
 .iledysile-cart-empty-p {
     padding-left: 1.8em;
@@ -61,16 +62,16 @@ body:not(.home) .site-content {
     width: 56% !important;
 }
 .iledysile-submit-cart-btn a {
-    background-color: #000000 !important;
-    border: 2px solid #000000 !important;
-    color: #ffffff !important;
+    background-color: #F1DEFC !important;
+    border: 2px solid #F1DEFC!important;
+    color: #000000 !important;
     transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
     text-decoration: none !important;
     height: 60px !important; 
 }
 .iledysile-submit-cart-btn a:hover {
-    background-color: #101010 !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
 } 
 
 .iledysile-col-right-sumary-block input[type="text"] {
@@ -94,16 +95,32 @@ body:not(.home) .site-content {
 }
 
 .iledysile-coupon-form button:hover{
-    background-color: #F1DEFC !important;
+    background-color: #ffffff !important;
     border: 2px solid #F1DEFC !important;
-    color: #4f4f4f !important;
+    color: #000000 !important;
 }
 
 #wc-block-components-totals-coupon__input-0:focus::placeholder {
     color: #808080; 
     opacity: 1; 
 }
+.wc-block-components-panel__button>.wc-block-components-panel__button-icon {
+    background-color: #F1DEFC !important;
+}
+.wc-block-components-panel__button-icon {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    display: block; /* por si acaso, previene pequeños desajustes */
+}
+.wc-block-components-panel__button-icon path {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    d: path("M5 8L12 17L19 8Z");
+}
 
+.wc-block-components-panel__button[aria-expanded="true"] .wc-block-components-panel__button-icon path {
+    transform: rotate(180deg);
+}
 @media (max-width: 768px) {
     .wc-block-cart-item__total {
         font-weight: bold !important;
@@ -114,7 +131,7 @@ body:not(.home) .site-content {
         height: unset !important;
     }
     .iledysile-col-right {
-        height: 38em;
+        height: 25em;
     }
     .iledysile-square-menu-logo {
         position: absolute;

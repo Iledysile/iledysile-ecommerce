@@ -57,12 +57,14 @@ body {
 }
 
 .hero__title-bg--front {
-    color: #A4365D;
+    color:transparent;
+    -webkit-text-stroke: 1px rgb(255, 106, 105),
+
 }
 
 .hero__title-bg--back {
-    -webkit-text-stroke: 0px currentColor;
-    -webkit-text-fill-color: #CEB9F2;
+    color:transparent;
+    -webkit-text-stroke: 1px #CEB9F2;
 }
 
 /*---------------------------------------*/
