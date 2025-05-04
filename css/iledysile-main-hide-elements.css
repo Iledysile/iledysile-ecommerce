@@ -42,6 +42,10 @@ button#site-navigation-menu-toggle {
     display: none;
 }
 
+#coming-soon-footer-banner{
+    display: none !important;
+}
+
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - APPLIED IN ALL PAGES */
