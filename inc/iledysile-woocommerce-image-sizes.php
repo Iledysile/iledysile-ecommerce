@@ -13,8 +13,8 @@ function iledysile_custom_gallery_thumbnail_size($size) {
 add_filter('woocommerce_get_image_size_thumbnail', 'iledysile_custom_thumbnail_size');
 function iledysile_custom_thumbnail_size($size) {
     return array(
-        'width'  => 900, 
-        'height' => 900, 
+        'width'  => 1000, 
+        'height' => 1500,
         'crop'   => 0
     );
 }
@@ -23,8 +23,8 @@ function iledysile_custom_thumbnail_size($size) {
 add_filter('woocommerce_get_image_size_single', 'iledysile_custom_single_image_size');
 function iledysile_custom_single_image_size($size) {
     return array(
-        'width'  => 1500, 
-        'height' => 1992,
+        'width'  => 1000, 
+        'height' => 1500,
         'crop'   => 0
     );
 }
