@@ -42,3 +42,38 @@ function remove_image_zoom_support() {
     remove_theme_support( 'wc-product-gallery-zoom' );
 }
 add_action( 'wp', 'remove_image_zoom_support', 100 );
+
+// Add custom Iledysile image wrapper to WooCommerce product images
+add_filter('woocommerce_single_product_image_thumbnail_html', function($html, $attachment_id) {
+    // Carga el HTML en DOMDocument para manipularlo mejor
+    libxml_use_internal_errors(true);
+    $doc = new DOMDocument();
+    $doc->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
+    libxml_clear_errors();
+
+    $a_tags = $doc->getElementsByTagName('a');
+    if ($a_tags->length > 0) {
+        $a = $a_tags->item(0);
+        $div = $doc->createElement('div');
+        $div->setAttribute('class', 'iledysile-image-wrapper');
+
+        // Clonar el enlace para moverlo al div
+        $a_clone = $a->cloneNode(true);
+
+        $div->appendChild($a_clone);
+
+        // Reemplazar el enlace original por el div
+        $a->parentNode->replaceChild($div, $a);
+
+        // Obtener el nuevo HTML
+        $body = $doc->getElementsByTagName('body')->item(0);
+        $new_html = '';
+        foreach ($body->childNodes as $child) {
+            $new_html .= $doc->saveHTML($child);
+        }
+
+        return $new_html;
+    }
+
+    return $html;
+}, 10, 2);

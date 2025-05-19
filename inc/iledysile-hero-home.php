@@ -18,4 +18,4 @@ function iledysile_hero_home() {
         <?php
     }
 }
-add_action('storefront_before_content', 'iledysile_hero_home');
+//add_action('storefront_before_content', 'iledysile_hero_home');
