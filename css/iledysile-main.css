@@ -13,10 +13,7 @@
 
 body {
     font-family: "Be Vietnam Pro", serif !important;
-}
-
-body:not(.home) .site-content {
-    margin-top: 6em;
+    background-color: #f3f3f3;
 }
 
 /* Eliminar los márgenes y hacer el contenido más ancho */
