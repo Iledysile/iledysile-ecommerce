@@ -7,8 +7,11 @@
 /* Import elements to hide first: */
 @import url('iledysile-product-hide-elements.css');
 
+.iledysile-square-menu-logo {
+    position: fixed;
+}
+
 .site-main {
-    background-color: #d6ab99;
     opacity: 1 !important;
     margin-bottom: 0px !important;
 }
@@ -139,7 +142,6 @@ input[type="range"]::-ms-thumb {
 
     .storefront-full-width-content.single-product div.product .summary {
         width: 50% !important;
-        background-color: #d6ab99;
         opacity: 1 !important;
     }
 

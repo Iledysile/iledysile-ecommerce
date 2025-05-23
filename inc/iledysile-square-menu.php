@@ -17,9 +17,11 @@ function iledysile_add_square_menu() {
     <div id="iledysile-square-menu" class="iledysile-square-menu">
         <div class="iledysile-square-menu-top">
             <div class="iledysile-square-menu-top-left">
-                <div class="iledysile-square-menu-logo">
-                    <span class="iledysile-logo">Île d'Ysile</span>
-                </div>
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <div class="iledysile-square-menu-logo">
+                        <span class="iledysile-logo">Île d'Ysile</span>
+                    </div>
+                </a>
                 <nav class="iledysile-square-menu-items">                    
                     <?php
                         wp_nav_menu(

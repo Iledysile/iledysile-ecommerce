@@ -7,8 +7,16 @@
 /* Import elements to hide first: */
 @import url('iledysile-kontakt-hide-elements.css');
 
-body {
-    background-color: #ffe7c0;
+.site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.site-content {
+    flex: 1;
+}
+.iledysile-kontakt-columns {
+      flex: 1;
 }
 
 input, textarea {
@@ -42,7 +50,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     margin-top: 25px;
 }
 
-
 @media (min-width: 768px) {
     .iledysile-square-menu-logo {
         position: fixed;
@@ -62,16 +69,8 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     .hentry {
         margin-bottom: 0px;
     }
-    body:not(.home) .site-content {
-        margin-top: 1em;
-    }
     .hentry .entry-content .wp-block-columns .wp-block-column:not(:first-child) {
-        margin-top: 6em;
-    }
-    .hentry .entry-content .wp-block-columns .wp-block-column:not(:last-child) {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;  /* Alinea la imagen abajo */
+        margin-top: 8em;
     }
 
     .wpforms-container .wpforms-field {
@@ -80,9 +79,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
 }
 
-.wp-block-image img {
-    max-width: fit-content;
-}
 
 @media (max-width: 800px) {
     .wp-block-columns {
@@ -108,9 +104,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 @media (max-width: 1300px) {
     .hentry .entry-content .wp-block-columns .wp-block-column:not(:last-child), .editor-styles-wrapper .wp-block-columns .wp-block-column:not(:last-child) {
         margin-right: 20px !important;
-    }
-    .wp-block-image img {
-        width: 430px;
     }
 }
 

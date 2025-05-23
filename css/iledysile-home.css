@@ -3,14 +3,17 @@
 /* INIT - APPLIED IN HOME PAGE           */
 /*---------------------------------------*/
 /*---------------------------------------*/
-
+@import url('iledysile-spinner.css');
 body {
-    padding: 0 0 100vh 0;
     scroll-behavior: smooth;    
 }
 
 * {
     box-sizing: border-box;
+}
+
+.iledysile-square-menu-logo {
+    position: fixed;
 }
 
 .hero {
@@ -39,6 +42,10 @@ body {
     line-height: 1;
 }
 
+.nk-awb-wrap-content {
+    display: none;
+}
+
 .hero__title-text {
     position: relative;
     z-index: 1;
@@ -65,6 +72,16 @@ body {
 .hero__title-bg--back {
     color:transparent;
     -webkit-text-stroke: 1px #CEB9F2;
+}
+
+.iledysile-hero-image.hidden,
+.iledysile-hero-image-2.hidden {
+  display: none !important;
+}
+
+.iledysile-hero-image,
+.iledysile-hero-image-2 {
+  display: block;
 }
 
 /*---------------------------------------*/
