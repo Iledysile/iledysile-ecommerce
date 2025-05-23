@@ -109,26 +109,109 @@ input[type="range"]::-ms-thumb {
     object-fit: contain; /* para mantener proporción */
 }
 
-
-#pa_slug_size {
-    appearance: none;        /* Para la mayoría de los navegadores */
-    -webkit-appearance: none; /* Para Safari y Chrome */
-    -moz-appearance: none;    /* Para Firefox */
-    border: 1px solid #ccc;
-    padding: 5px;
-    background-color: transparent;
-    width: 120px;
-    color: #43454b;
-    font-size: 16pt;
-  }  
-  /* Para quitar la flecha en Internet Explorer y Edge */
-  #pa_slug_size::-ms-expand {
-    display: none;
-  }
-  #pa_slug_size option[value=""] {
-    text-align: center; /* Centra el texto de la opción por defecto */
+.woocommerce-Price-amount {
+    color: #8d8d8d !important;
+    font-family: "Be Vietnam Pro", serif !important;
+    font-weight: 400 !important;
 }
-  
+
+.woocommerce-product-details__short-description {
+    color: #000 !important;
+    font-family: "Be Vietnam Pro", serif !important;
+    font-weight: 400 !important;
+}
+
+.custom-select-wrapper {
+	position: relative;
+	display: inline-block;
+	width: 190px;
+	background-color: #f1defc;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.custom-select-wrapper select{
+        font-family: "Be Vietnam Pro", serif !important;
+    font-weight: 400 !important;
+}
+
+.input-text.qty.text {
+    width: 190px;
+    background: #f1defc;
+    margin-top: 50px;
+    box-shadow: none !important;
+    text-align: left !important;
+    padding-left: 14px;
+    font-size: 1rem;
+    color: #000 !important;
+    font-family: "Be Vietnam Pro", serif !important;
+    font-weight: 400 !important;
+}
+
+/* WebKit (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: auto;
+  display: inline-block;
+  opacity: 1;
+  margin: 0;
+}
+
+/* Firefox (evita que las flechas se oculten al usar textfield) */
+input[type="number"] {
+  -moz-appearance: number-input;
+}
+
+.custom-select-wrapper select,
+.custom-select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: #f1defc;
+	border: none;
+	padding: 0.75rem 2.5rem 0.75rem 1rem;
+	width: 100%;
+    max-width: 100% !important;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.custom-select-wrapper select:focus {
+	outline: none;
+}
+
+.custom-arrow {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	pointer-events: none;
+	fill: #000;
+}
+
+.iledisyle-size-chart-button a {
+    background-color: transparent !important;
+    color: #8d8d8d !important;
+    border-top: 2px solid #8d8d8d !important;
+    border-bottom: 2px solid #8d8d8d !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.iledisyle-size-chart-button a:hover {
+    background-color: #8d8d8d !important;
+    color: white !important;
+}
+
+.iledysile-product-description {
+    color: #000;
+}
+
 
 @media (min-width: 768px) {
     body:not(.home) .site-content {
