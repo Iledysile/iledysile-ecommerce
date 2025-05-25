@@ -16,13 +16,6 @@ body {
     background-color: #f3f3f3;
 }
 
-/* Eliminar los márgenes y hacer el contenido más ancho */
-.col-full {
-    max-width: 100% !important;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin: 0;
-}
 
 /* Oculta el viejo carrito de la compra */
 .site-header-cart .cart-contents {
@@ -32,12 +25,12 @@ body {
 }
 
 /* Eliminar los márgenes y hacer el contenido más ancho (version mobile) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .col-full {
         padding-left: 28px;
         padding-right: 28px;
     }
-}
+} */
 
 @media (min-width: 768px) {
     .iledysile-menu {

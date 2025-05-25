@@ -11,6 +11,14 @@ body:not(.home) .site-content {
     margin-top: 0px !important;
 }
 
+/* Eliminar los márgenes y hacer el contenido más ancho */
+.col-full {
+    max-width: 100% !important;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0;
+}
+
 .storefront-primary-navigation {
     display: none;
 }
@@ -86,6 +94,10 @@ body:not(.home) .site-content {
     opacity: 0;
 }
 
+.woocommerce-products-header {
+    display: none;
+}
+
 @media (min-width: 769px) {
     .storefront-primary-navigation {
         border-bottom: 1px solid #80808026;
@@ -103,12 +115,26 @@ body:not(.home) .site-content {
         margin-right: 0 !important;
         width: 50% !important;
     }
+
+    li.product.first {
+        padding-left: 5%;   
+    }
+
+    li.product.last {
+        padding-right: 5%;
+    }
 }
 
-.woocommerce-products-header {
-    display: none;
+@media (max-width: 768px) {
+    /* Eliminar los márgenes y hacer el contenido más ancho */
+    .col-full {
+        max-width: 100% !important;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 1vh;
+        margin: 0;
+    }
 }
-
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - SHOP STYLING                    */
