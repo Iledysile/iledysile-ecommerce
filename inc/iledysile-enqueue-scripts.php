@@ -64,5 +64,14 @@ function iledysile_enqueue_scripts() {
             '1.0', 
             true);
     }
+    if (is_page('uber')) {  // Solo en la página con slug "uber"
+        wp_enqueue_script(
+            'iledysile-uber-js',
+            get_stylesheet_directory_uri() . '/js/iledysile-uber-js.js',
+            array(),
+            '1.0',
+            true
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'iledysile_enqueue_scripts');

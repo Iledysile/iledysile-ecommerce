@@ -51,3 +51,21 @@ body:not(.home) .site-content {
     border: 2px solid #F1DEFC !important;
     color: #4f4f4f !important;
 }
+
+@media (max-width: 768px) {
+    .iledysile-square-menu-logo {
+        position: absolute;
+    }
+    .wp-block-columns {
+        flex-direction: column-reverse !important;
+    }
+    .iledysile-fake-header {
+        margin-bottom: 0;
+        font-size: 2em;
+        padding-top: 1.5em;
+        padding-left: 0;
+    }
+    .iledysile-col-right {
+        margin-top: 2em !important;
+    }
+}

@@ -23,10 +23,6 @@
     display: none !important;
 }
 
-.ajax_add_to_cart {
-    display: none !important;
-}
-
 @media (max-width: 768px) {
     .woocommerce-product-gallery__trigger {
         display: none;

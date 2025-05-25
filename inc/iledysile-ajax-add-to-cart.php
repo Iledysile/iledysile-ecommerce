@@ -3,8 +3,8 @@
 
 function add_ajax_cart_button() {
     global $product;
-    echo '<button type="button" class="ajax_add_to_cart button alt" data-product_id="' . esc_attr($product->get_id()) . '">
-        In den Warkenkorb (AJAX)
+    echo '<button type="button" class="ajax_add_to_cart iledysile_add_cart button alt" data-product_id="' . esc_attr($product->get_id()) . '">
+        In den Warenkorb
     </button>
     <div class="ajax-response"></div>';
 }

@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
     }
 
     // Agregar flechas de navegación
-    $('.woocommerce-product-gallery').append('<div class="gallery-nav prev">❮</div><div class="gallery-nav next">❯</div>');
+    $('.woocommerce-product-gallery').append('<div class="gallery-nav prev"></div><div class="gallery-nav next"></div>');
 
     $('.gallery-nav.next').click(function () {
         if (currentIndex < totalImages - 1) {

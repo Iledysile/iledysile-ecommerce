@@ -70,22 +70,26 @@ input[type="range"]::-ms-thumb {
 .gallery-nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: white;
-    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    background-color: #c7b7db;
     cursor: pointer;
-    z-index: 10;
-    border-radius: 35px;
-    
+    clip-path: polygon(10% 70%, 50% 30%, 90% 70%);
+    transform-origin: center;
+    z-index: 1000 !important;
+    padding: 0;
+    border-radius: 0;
+    transform: translateY(-50%); 
 }
 
 .gallery-nav.prev {
-    left: 10px;
+  left: 4rem;
+  transform: translateY(-50%) rotate(270deg);
 }
 
 .gallery-nav.next {
-    right: 10px;
+  right: 4rem;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .gallery-nav:hover {
@@ -121,24 +125,31 @@ input[type="range"]::-ms-thumb {
     font-weight: 400 !important;
 }
 
+.single-product div.product table.variations .value {
+    margin-bottom: 0 !important;
+}
+
+.single-product div.product .variations_button {
+    padding-top: 0 !important;
+}
+
 .custom-select-wrapper {
 	position: relative;
-	display: inline-block;
 	width: 190px;
 	background-color: #f1defc;
 	overflow: hidden;
-	margin-bottom: 5px;
+    margin-bottom: clamp(0.5rem, 3vh, 1.5rem);
 }
 
 .custom-select-wrapper select{
-        font-family: "Be Vietnam Pro", serif !important;
+    font-family: "Be Vietnam Pro", serif !important;
     font-weight: 400 !important;
 }
 
 .input-text.qty.text {
     width: 190px;
     background: #f1defc;
-    margin-top: 50px;
+    margin-block: clamp(0.5rem, 3vh, 1.5rem);
     box-shadow: none !important;
     text-align: left !important;
     padding-left: 14px;
@@ -148,18 +159,29 @@ input[type="range"]::-ms-thumb {
     font-weight: 400 !important;
 }
 
-/* WebKit (Chrome, Safari) */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: auto;
-  display: inline-block;
-  opacity: 1;
-  margin: 0;
+.woocommerce-variation-add-to-cart {
+    display: grid;
 }
 
-/* Firefox (evita que las flechas se oculten al usar textfield) */
-input[type="number"] {
-  -moz-appearance: number-input;
+button.iledysile_add_cart {
+    width: 190px;
+    margin-top: clamp(0.5rem, 3vh, 1.5rem);
+    background-color: transparent !important;
+    color: #43454b !important;
+    border-top: 2px solid #43454b !important;
+    border-bottom: 2px solid #43454b !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-family: "Be Vietnam Pro", serif !important;
+}
+button.iledysile_add_cart:hover {
+    background-color: #43454b !important;
+    color: white !important;
 }
 
 .custom-select-wrapper select,
@@ -191,9 +213,9 @@ input[type="number"] {
 
 .iledisyle-size-chart-button a {
     background-color: transparent !important;
-    color: #8d8d8d !important;
-    border-top: 2px solid #8d8d8d !important;
-    border-bottom: 2px solid #8d8d8d !important;
+    color: #43454b !important;
+    border-top: 2px solid #43454b !important;
+    border-bottom: 2px solid #43454b !important;
     border-left: none !important;
     border-right: none !important;
     border-radius: 0 !important;
@@ -201,10 +223,11 @@ input[type="number"] {
     font-size: 16px !important;
     cursor: pointer !important;
     transition: all 0.3s ease !important;
+    margin-block: clamp(0.5rem, 3vh, 1.5rem);
 }
 
 .iledisyle-size-chart-button a:hover {
-    background-color: #8d8d8d !important;
+    background-color: #43454b !important;
     color: white !important;
 }
 
@@ -217,7 +240,12 @@ input[type="number"] {
     body:not(.home) .site-content {
         margin-top: 0px !important;
     }
-
+    .col-full {
+        max-width: 100% !important;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin: 0;
+    }
     .storefront-full-width-content.single-product div.product .woocommerce-product-gallery {
         width: 50% !important;
         margin-right: 0px !important;
@@ -229,7 +257,8 @@ input[type="number"] {
     }
 
     .storefront-full-width-content.single-product div.product .summary {
-        padding: 3%;
+        padding-top: 3%;
+        padding-left: 10%;
     }
 
     .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
@@ -251,8 +280,26 @@ input[type="number"] {
 }
 
 @media (max-width: 768px) {
+    .gallery-nav {
+        display: none;
+    }
+    .iledysile-square-menu-logo {
+        position: absolute;
+    }
     body:not(.home) .site-content {
         margin-top: 0px;
+    }
+}
+@media (max-width: 1370px) {
+    .gallery-nav {
+        top: 70%;
+    }
+    .gallery-nav.prev {
+        left: 2rem;
+    }
+
+    .gallery-nav.next {
+        right: 2rem;
     }
 }
 /*---------------------------------------*/

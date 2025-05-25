@@ -52,6 +52,7 @@
     font-size: 4rem; /* Tamaño de fuente con rem para flexibilidad */
     color: black; 
 	text-transform: uppercase;
+	word-spacing: 0.4em;
 }
 
 .iledysile-square-menu-bottom {
