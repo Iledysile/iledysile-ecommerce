@@ -2,7 +2,6 @@
 
 .iledysile-container-product-added {
     right: -100%;
-    /* Comienza fuera de la pantalla */
     top: 0;
     position: fixed;
     width: 50%;
@@ -53,7 +52,7 @@
 
 .iledysile-col-right {
     width: 67%;
-    background-color: #DBC794;
+    background-color: #e5e5e5;
     border-bottom: 2px solid black;
 }
 
@@ -123,8 +122,8 @@
 
 .iledysile-link {
     text-decoration: none;
-    border: 2px solid black;
-    background-color: #DBC794;
+    border: 2px solid #43454b;
+    background-color: #e5e5e5;
     width: 52%;
     text-align: center;
     height: 60px;
@@ -143,8 +142,8 @@
 }
 
 .iledysile-link.third {
-    background-color: #000000 !important;
-    border: 2px solid #000000 !important;
+    background-color: #43454b !important;
+    border: 2px solid #43454b !important;
     color: #ffffff !important;
     transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
     text-decoration: none !important;
@@ -152,7 +151,8 @@
 }
 
 .iledysile-link.third:hover {
-    background-color: #101010 !important;
+    background-color: #8d8d8d !important;
+    border: 2px solid #8d8d8d !important;
     color: #ffffff !important;
 }
 

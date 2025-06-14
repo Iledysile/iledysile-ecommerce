@@ -9,6 +9,14 @@
 
 .iledysile-square-menu-logo {
     position: fixed;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.iledysile-square-menu-logo.hidden {
+    transform: translateY(-100%);
+    transform: rotate(90deg); /* se mantiene */
+    opacity: 0;
+    pointer-events: none;
 }
 
 .site-main {
@@ -72,7 +80,7 @@ input[type="range"]::-ms-thumb {
     top: 50%;
     width: 40px;
     height: 40px;
-    background-color: #c7b7db;
+    background-color: #43454b;
     cursor: pointer;
     clip-path: polygon(10% 70%, 50% 30%, 90% 70%);
     transform-origin: center;
@@ -93,8 +101,8 @@ input[type="range"]::-ms-thumb {
 }
 
 .gallery-nav:hover {
-    border: solid 1px #BBB1CF;
-    background-color: #b7816b70;
+    border: solid 1px #8d8d8d;
+    background-color: #8d8d8d;
 }
 
 .iledysile-image-wrapper {
@@ -133,19 +141,6 @@ input[type="range"]::-ms-thumb {
     padding-top: 0 !important;
 }
 
-.custom-select-wrapper {
-	position: relative;
-	width: 190px;
-	background-color: #f1defc;
-	overflow: hidden;
-    margin-bottom: clamp(0.5rem, 3vh, 1.5rem);
-}
-
-.custom-select-wrapper select{
-    font-family: "Be Vietnam Pro", serif !important;
-    font-weight: 400 !important;
-}
-
 .input-text.qty.text {
     width: 190px;
     background: #f1defc;
@@ -166,10 +161,8 @@ input[type="range"]::-ms-thumb {
 button.iledysile_add_cart {
     width: 190px;
     margin-top: clamp(0.5rem, 3vh, 1.5rem);
-    background-color: transparent !important;
-    color: #43454b !important;
-    border-top: 2px solid #43454b !important;
-    border-bottom: 2px solid #43454b !important;
+    background-color: #43454b !important;
+    color: white !important;
     border-left: none !important;
     border-right: none !important;
     border-radius: 0 !important;
@@ -180,8 +173,22 @@ button.iledysile_add_cart {
     font-family: "Be Vietnam Pro", serif !important;
 }
 button.iledysile_add_cart:hover {
-    background-color: #43454b !important;
+    background-color: #8d8d8d !important;
     color: white !important;
+}
+
+.custom-select-wrapper {
+	position: relative;
+    background-color: #f1defc;
+	width: 190px;
+	overflow: hidden;
+    margin-bottom: clamp(0.5rem, 3vh, 1.5rem);
+}
+
+.custom-select-wrapper select{
+    font-family: "Be Vietnam Pro", serif !important;
+    background-color: transparent !important;
+    font-weight: 400 !important;
 }
 
 .custom-select-wrapper select,
@@ -189,7 +196,6 @@ button.iledysile_add_cart:hover {
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background-color: #f1defc;
 	border: none;
 	padding: 0.75rem 2.5rem 0.75rem 1rem;
 	width: 100%;
@@ -227,8 +233,9 @@ button.iledysile_add_cart:hover {
 }
 
 .iledisyle-size-chart-button a:hover {
-    background-color: #43454b !important;
-    color: white !important;
+    color: #8d8d8d !important;
+    border-top: 2px solid #8d8d8d !important;
+    border-bottom: 2px solid #8d8d8d !important;
 }
 
 .iledysile-product-description {

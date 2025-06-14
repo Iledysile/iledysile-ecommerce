@@ -1,14 +1,14 @@
 
 @import url('iledysile-spinner.css');
 @import url('iledysile-cart-hide-elements.css');
-body {
-    background-color: #F6EFDB;
-}
 body:not(.home) .site-content {
     margin-top: 0 !important;
 }
 .col-full {
-    padding: 0 !important;
+    max-width: 100% !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
 }
 .iledysile-square-menu-logo {
     position: fixed;
@@ -29,12 +29,15 @@ body:not(.home) .site-content {
 .iledysile-cart-items {
     padding-left: 2%;
 }
+.iledysile-cart-items img {
+    border-radius: 0 !important;
+}
 .iledysile-address-block {
     display: none;
 }
 
 .iledysile-col-right {
-    background-color: #FFF6CD;
+    background-color: #e5e5e5;
     padding-left: 2.2641509434%;
     padding-right: 2.2641509434%;
 }
@@ -62,50 +65,57 @@ body:not(.home) .site-content {
     width: 56% !important;
 }
 .iledysile-submit-cart-btn a {
-    background-color: #F1DEFC !important;
-    border: 2px solid #F1DEFC!important;
-    color: #000000 !important;
+    background-color: #43454b !important;
+    border: 2px solid #43454b!important;
+    color: #ffffff !important;
     transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
     text-decoration: none !important;
     height: 60px !important; 
 }
 .iledysile-submit-cart-btn a:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: #8d8d8d !important;
+    border: 2px solid #8d8d8d!important;
+    color: #ffffff !important;
 } 
 
 .iledysile-col-right-sumary-block input[type="text"] {
     border: 0 !important;
     border-bottom: 2px solid #000000 !important;
-    background-color: #FFF6CD !important;
+    background-color: #f3f3f3 !important;
     box-shadow: none !important;
     border-radius: 0 !important;
 }
 
 .iledysile-col-right-sumary-block select {
-    background-color: #FFF6CD !important;
+    background-color: #f3f3f3 !important;
 }
 
 .iledysile-coupon-form button {
-    background-color: #FFF6CD !important;
-    border: 2px solid #000000 !important;
-    color: #000000 !important;
+    background-color: transparent !important;
+    color: #43454b !important;
+    border-top: 2px solid #43454b !important;
+    border-bottom: 2px solid #43454b !important;
     transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease !important;
     text-decoration: none !important;
 }
 
 .iledysile-coupon-form button:hover{
-    background-color: #ffffff !important;
-    border: 2px solid #F1DEFC !important;
-    color: #000000 !important;
+    color: #8d8d8d !important;
+    border-top: 2px solid #8d8d8d !important;
+    border-bottom: 2px solid #8d8d8d !important;
+}
+
+span.wc-block-components-button__text {
+    text-transform: uppercase !important;
+}
+
+.wc-block-components-quantity-selector:after {
+    border-radius: 0 !important;
 }
 
 #wc-block-components-totals-coupon__input-0:focus::placeholder {
     color: #808080; 
     opacity: 1; 
-}
-.wc-block-components-panel__button>.wc-block-components-panel__button-icon {
-    background-color: #F1DEFC !important;
 }
 .wc-block-components-panel__button-icon {
     transition: transform 0.3s ease;

@@ -10,7 +10,6 @@ function iledysile_enqueue_styles() {
     /* Los CSS que NO dependen de una condición se declaran en el style.css raíz 
      (Ej: idy-main.cs, idy-main-hide-elements.css) */
 
-    // Estilos específicos para la página de inicio
     if (is_front_page()) { 
         wp_enqueue_style(
             'iledysile-home-style', 
@@ -18,8 +17,6 @@ function iledysile_enqueue_styles() {
             array(), '1.0', 
             'all');
     }
-
-    // Estilos específicos para la página de shop
     if (is_shop() || is_product_category()) {
         wp_enqueue_style(
             'iledysile-shop-style',
@@ -29,8 +26,6 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
-
-    // Estilos específicos para la página de producto
     if (is_product()) {
         wp_enqueue_style(
             'iledysile-product-style',
@@ -48,8 +43,6 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
-
-    // Estilos específicos para la página de Kontakt
     if (is_page('kontakt')) {
         wp_enqueue_style(
             'iledysile-kontakt-style',
@@ -59,8 +52,6 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
-
-    // Estilos específicos para la página de Über
     if (is_page('uber')) {
         wp_enqueue_style(
             'iledysile-uber-style',
@@ -79,7 +70,6 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
-
     if (is_checkout()) {
         wp_enqueue_style(
             'iledysile-checkout-style',
@@ -89,8 +79,15 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
-
-    
+    if (is_page('grossentabelle')) {
+        wp_enqueue_style(
+            'iledysile-grossentabelle-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-grossentabelle.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'iledysile_enqueue_styles');

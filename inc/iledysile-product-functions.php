@@ -11,7 +11,7 @@ add_filter( 'woocommerce_dropdown_variation_attribute_options_args', function( $
 
 //Crear enlace a la tabla de tallas
 function iledysile_single_grossen_tabelle() {
-    $size_chart_url = site_url('/tabla-de-tallas'); // Cambia esta URL por la real donde está tu tabla de tallas
+    $size_chart_url = site_url('/grossentabelle'); 
     echo '<div class="iledisyle-size-chart-button">';
     echo '<a href="' . esc_url($size_chart_url) . '" class="button" target="_blank" rel="noopener noreferrer">';
     echo 'Zur Grössentabelle';
