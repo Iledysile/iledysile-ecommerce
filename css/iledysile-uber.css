@@ -33,18 +33,16 @@
     position: relative;
     z-index: 1;
     white-space: nowrap;
-    /* Un solo transition para color y filter */
-    transition: color 1.5s ease, filter 1.5s ease;
+    /* Un solo transition para color */
+    transition: color 1.5s ease;
 }
 
 .background-text.active {
-    color: #daa0fc; /* color más fuerte cuando está activo */
-    filter: drop-shadow(0 0 3px #daa0fc);
+    color: #6B04FA; /* color más fuerte cuando está activo */
 }
 
 .background-text:hover {
-    color: #daa0fc;
-    filter: drop-shadow(0 0 3px #daa0fc);
+    color: #6B04FA;
     cursor: default; 
 }
 

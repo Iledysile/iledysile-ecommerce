@@ -19,23 +19,23 @@
 	<footer class="iledysile-footer" role="contentinfo">
 		<div class="footer__navigation">
 			<span class="footer__trademark">
-				Île d'Ysile®
+				ÎLE D'YSILE
 			</span>
 			<nav class="footer__links">
 				<ul class="footer__links-list">
 					<li class="menu-item">
 						<a href="/privacy" class="menu-item__link">
-							<span class="menu-item__link-text">Privacy Policy</span>
+							<span class="menu-item__link-text">DATENSCHUTZ</span>
 						</a>
 					</li>
 					<li class="menu-item">
 						<a href="/terms" class="menu-item__link">
-							<span class="menu-item__link-text">Terms &amp; Conditions</span>
+							<span class="menu-item__link-text">AGB</span>
 						</a>
 					</li> 
 					<li class="menu-item">
 						<a href="<?php echo $uber_url; ?>" class="menu-item__link">
-							<span class="menu-item__link-text">Über uns</span>
+							<span class="menu-item__link-text">ÜBER</span>
 						</a>
 					</li>
 				</ul>

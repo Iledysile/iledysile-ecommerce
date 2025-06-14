@@ -12,8 +12,8 @@
 
       setTimeout(() => {
         selected.classList.remove('active');
-      }, 2000); // después de 2s vuelve al color base
+      }, 4000); // después de 2s vuelve al color base
     }
 
-    setInterval(highlightRandomText, 2000);
+    setInterval(highlightRandomText, 4000);
   });
