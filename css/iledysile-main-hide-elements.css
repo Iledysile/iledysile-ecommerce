@@ -46,6 +46,10 @@ button#site-navigation-menu-toggle {
     display: none !important;
 }
 
+.cmplz-manage-consent {
+  display: none !important;
+}
+
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END - APPLIED IN ALL PAGES */

@@ -121,6 +121,13 @@ input[type="range"]::-ms-thumb {
     object-fit: contain; /* para mantener proporción */
 }
 
+a:focus {
+    outline: none !important; 
+}
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
 .woocommerce-Price-amount {
     color: #8d8d8d !important;
     font-family: "Be Vietnam Pro", serif !important;

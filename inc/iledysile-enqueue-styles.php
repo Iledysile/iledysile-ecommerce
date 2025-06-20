@@ -88,6 +88,33 @@ function iledysile_enqueue_styles() {
             'all'
         );
     }
+    if (is_page('agb')) {
+        wp_enqueue_style(
+            'iledysile-agb-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-agb.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
+    if (is_page('datenschutz')) {
+        wp_enqueue_style(
+            'iledysile-datenschutz-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-datenschutz.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
+    if (is_page('cookie-richtlinie')) {
+        wp_enqueue_style(
+            'iledysile-cookierichtlinie-style',
+            get_stylesheet_directory_uri() . '/css/iledysile-cookierichtlinie.css',
+            array(),
+            '1.0',
+            'all'
+        );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'iledysile_enqueue_styles');

@@ -24,12 +24,12 @@
 			<nav class="footer__links">
 				<ul class="footer__links-list">
 					<li class="menu-item">
-						<a href="/privacy" class="menu-item__link">
+						<a href="/datenschutz" class="menu-item__link">
 							<span class="menu-item__link-text">DATENSCHUTZ</span>
 						</a>
 					</li>
 					<li class="menu-item">
-						<a href="/terms" class="menu-item__link">
+						<a href="/agb" class="menu-item__link">
 							<span class="menu-item__link-text">AGB</span>
 						</a>
 					</li> 
