@@ -51,6 +51,10 @@ body:not(.home) .site-content {
     width: auto;  /* Asegura que solo ocupa el tamaño de la imagen */
 }
 
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
 /* Ocultar el botón "Añadir al carrito" en la tienda */
 .woocommerce .products .product .add_to_cart_button {
     display: none !important;
