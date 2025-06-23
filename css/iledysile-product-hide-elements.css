@@ -7,10 +7,6 @@
     display: none !important;
 }
 
-/* .flex-control-nav.flex-control-thumbs {
-    display: none;
-} */
-
 .product_meta {
     display: none;
 }
@@ -21,6 +17,12 @@
 
 .single_add_to_cart_button {
     display: none !important;
+}
+
+@media (min-width: 768px) {
+.flex-control-nav.flex-control-thumbs {
+    display: none;
+}
 }
 
 @media (max-width: 768px) {
