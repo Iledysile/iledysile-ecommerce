@@ -77,3 +77,47 @@ jQuery(function($) {
         }
     });
 });
+
+// Actualiza el punto activo del carrusel de imágenes en la página del producto
+// para que coincida con la imagen activa del carrusel
+document.addEventListener('DOMContentLoaded', () => {
+
+  function updateActivePoint() {
+    const points = document.querySelectorAll('.flex-control-nav.flex-control-thumbs li');
+    points.forEach(li => {
+      const img = li.querySelector('img');
+      if (img && img.classList.contains('flex-active')) {
+        li.classList.add('flex-active');
+      } else {
+        li.classList.remove('flex-active');
+      }
+    });
+  }
+
+  function initObserver() {
+    const points = document.querySelectorAll('.flex-control-nav.flex-control-thumbs li');
+    if (points.length === 0) return false; // No hay puntos, esperar
+
+    points.forEach(li => {
+      const img = li.querySelector('img');
+      if (img) {
+        const observer = new MutationObserver(() => {
+          updateActivePoint();
+        });
+        observer.observe(img, { attributes: true, attributeFilter: ['class'] });
+      }
+    });
+
+    // Ejecutamos la primera actualización
+    updateActivePoint();
+    return true;
+  }
+
+  // Esperar que los puntos existan usando MutationObserver en body
+  const bodyObserver = new MutationObserver((mutations, obs) => {
+    if (initObserver()) {
+      obs.disconnect();
+    }
+  });
+  bodyObserver.observe(document.body, { childList: true, subtree: true });
+});

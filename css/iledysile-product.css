@@ -121,13 +121,6 @@ input[type="range"]::-ms-thumb {
     object-fit: contain; /* para mantener proporción */
 }
 
-a:focus {
-    outline: none !important; 
-}
-a:focus, input:focus, textarea:focus, button:focus {
-    outline: none;
-}
-
 .woocommerce-Price-amount {
     color: #8d8d8d !important;
     font-family: "Be Vietnam Pro", serif !important;
@@ -303,7 +296,58 @@ button.iledysile_add_cart:hover {
     body:not(.home) .site-content {
         margin-top: 0px;
     }
+
+    .flex-control-nav.flex-control-thumbs {
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 10px !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    .flex-control-nav.flex-control-thumbs li {
+        position: relative !important;
+        width: 14px !important;
+        height: 14px !important;
+        margin: 0 6px !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .flex-control-nav.flex-control-thumbs li::before {
+        content: '' !important;
+        width: 10px !important;
+        height: 10px !important;
+        background-color: #ccc !important;
+        border-radius: 50% !important;
+        display: block !important;
+        transition: background-color 0.3s ease !important;
+        pointer-events: none !important;
+    }
+
+    /* Punto activo */
+    .flex-control-nav.flex-control-thumbs li.flex-active::before {
+        background-color: #000 !important;
+    }
+
+    .flex-control-nav.flex-control-thumbs li img {
+        opacity: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .single-product div.product .woocommerce-product-gallery .flex-viewport {
+        margin-bottom: 0.5em !important;
+    }
+
 }
+
 @media (max-width: 1370px) {
     .gallery-nav {
         top: 70%;

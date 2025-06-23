@@ -84,6 +84,21 @@ body {
   display: block;
 }
 
+@media (max-width: 768px) {
+    .iledysile-hero-image img {
+        object-position: 52% 80% !important;
+    }
+    .iledysile-hero-image-2 img {
+        object-position: 67% 0%;
+    }
+    .hero-1-active .iledysile-square-menu-logo {
+        top: auto;
+        bottom: 381px;
+        left: -29px;
+        transform-origin: bottom left;
+    }
+}
+
 /*---------------------------------------*/
 /*---------------------------------------*/
 /* END  - APPLIED IN HOME PAGE           */
