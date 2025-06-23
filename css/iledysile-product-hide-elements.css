@@ -20,9 +20,9 @@
 }
 
 @media (min-width: 768px) {
-.flex-control-nav.flex-control-thumbs {
-    display: none;
-}
+    .flex-control-nav.flex-control-thumbs {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
