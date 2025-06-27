@@ -88,13 +88,14 @@ body {
     max-width: 80%;
     margin: 3% auto;
     text-align: center;
-    margin-top: 6%;
+    margin-top: 5%;
     color: #9f9f9f;
 }
 
 .iledysile-hero-text h1 {
     font-size: 2em;
     color: #636363;
+    margin-bottom: 3rem;
 }
 
 .iledysile-hero-text h2 {
