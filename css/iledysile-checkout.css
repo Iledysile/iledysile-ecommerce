@@ -78,7 +78,15 @@ body:not(.home) .site-content {
 }
 
 .iledysile-payment-options {
-    text-transform: capitalize !important;
+    text-transform: none !important;
+}
+
+.wc-block-checkout__guest-checkout-notice {
+    display: none !important;
+}
+
+.wc-block-components-button__text {
+    text-transform: uppercase !important;
 }
 
 .wc-block-components-radio-control--highlight-checked .wc-block-components-radio-control-accordion-option--checked-option-highlighted {
