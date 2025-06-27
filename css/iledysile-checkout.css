@@ -77,6 +77,15 @@ body:not(.home) .site-content {
     border: 2px solid hsla(0, 0%, 7%, .8) !important;
 }
 
+.iledysile-payment-options {
+    text-transform: capitalize !important;
+}
+
+.wc-block-components-radio-control--highlight-checked .wc-block-components-radio-control-accordion-option--checked-option-highlighted {
+    border-radius: 0 !important;
+    border: 1px solid hsla(0, 0%, 7%, .11) !important;
+}
+
 @media (max-width: 768px) {
     .iledysile-square-menu-logo {
         position: absolute;
