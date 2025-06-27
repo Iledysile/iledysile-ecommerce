@@ -74,7 +74,7 @@ body:not(.home) .site-content {
 }
 
 .wc-blocks-components-select .wc-blocks-components-select__container {
-    border: 2px solid hsla(0, 0%, 7%, .8) !important;
+    border: 1px solid hsla(0, 0%, 7%, .11) !important;
 }
 
 .iledysile-payment-options {
@@ -84,6 +84,13 @@ body:not(.home) .site-content {
 .wc-block-components-radio-control--highlight-checked .wc-block-components-radio-control-accordion-option--checked-option-highlighted {
     border-radius: 0 !important;
     border: 1px solid hsla(0, 0%, 7%, .11) !important;
+    box-shadow: none !important;
+}
+
+.wc-block-components-radio-control--highlight-checked label.wc-block-components-radio-control__option--checked-option-highlighted {
+    border-radius: 0 !important;
+    border: 1px solid hsla(0, 0%, 7%, .11) !important;
+    box-shadow: none !important;
 }
 
 @media (max-width: 768px) {
