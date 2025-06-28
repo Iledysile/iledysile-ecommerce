@@ -109,12 +109,24 @@ body {
     font-weight: 300;
 }
 
-@media (max-width: 768px) {
-    .iledysile-hero-image img {
-        object-position: 52% 80% !important;
+@media (min-width: 768px) {
+
+    .iledysile-hero-image-mobile {
+        display: none;     
     }
-    .iledysile-hero-image-2 img {
-        object-position: 67% 0%;
+}
+
+@media (max-width: 768px) {
+    .iledysile-hero-image, .iledysile-hero-image-2 {
+        display: none;
+    }
+
+    .iledysile-hero-image-mobile {
+        display: block;        
+    }
+
+    .iledysile-hero-image-mobile img {
+        object-position:18% 50% !important;
     }
     .hero-1-active .iledysile-square-menu-logo {
         top: auto;

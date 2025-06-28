@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
     }, 600); // Retardo en ms para asegurarnos de que la página cargue correctamente
 });
 
+// Cambia la imagen del héroe en la página de inicio al cargar
 document.addEventListener('DOMContentLoaded', () => {
   const isHome = window.location.pathname === '/' || window.location.pathname === '/index.php';
   if (!isHome) return;
