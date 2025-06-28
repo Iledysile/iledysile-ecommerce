@@ -99,7 +99,12 @@ body {
 }
 
 .iledysile-hero-text h2 {
-    font-size: 1.7em;
+    font-size: 1.3em;
+    color: #797979;
+}
+
+.iledysile-hero-text p {
+    font-size: 1.3em;
     color: #797979;
 }
 
