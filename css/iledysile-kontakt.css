@@ -82,7 +82,10 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     .wpforms-container .wpforms-field {
         padding: 6px 0;
     }
+}
 
+@media (max-width: 768px) {
+    
 }
 
 /*---------------------------------------*/
