@@ -100,6 +100,10 @@ body:not(.home) .site-content {
     border: 1px solid hsla(0, 0%, 7%, .11) !important;
     box-shadow: none !important;
 }
+.iledysile-img-creditcards {
+    max-width: 50%;
+    height: auto;
+}
 
 @media (max-width: 768px) {
     .iledysile-square-menu-logo {
@@ -128,5 +132,9 @@ body:not(.home) .site-content {
     }
     fieldset#payment-method {
         padding-top: 8%;
+    }
+    .iledysile-img-creditcards {
+        max-width: 100%;
+        height: auto;
     }
 }
