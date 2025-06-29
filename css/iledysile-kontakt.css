@@ -95,6 +95,9 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     :root :where(.is-layout-flex) {
         gap: 0px !important;
     }
+    div.wpforms-container .wpforms-form .wpforms-field>* {
+        max-width: 100% !important;
+    }
 }
 
 /*---------------------------------------*/
