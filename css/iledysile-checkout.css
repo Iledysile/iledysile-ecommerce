@@ -117,4 +117,16 @@ body:not(.home) .site-content {
     .iledysile-col-right {
         margin-top: 2em !important;
     }
+    .wc-block-checkout__form {
+        margin-top: 8%;
+    }
+    fieldset#shipping-fields {
+        padding-top: 14% !important;
+    }
+    fieldset#shipping-option {
+        padding-top: 8%;
+    }
+    fieldset#payment-method {
+        padding-top: 8%;
+    }
 }
