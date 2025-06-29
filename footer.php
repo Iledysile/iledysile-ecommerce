@@ -19,7 +19,9 @@
 	<footer class="iledysile-footer" role="contentinfo">
 		<div class="footer__navigation">
 			<span class="footer__trademark">
-				ÎLE D'YSILE
+				<a href="/" class="menu-item__link">
+					<span class="menu-item__link-text">ÎLE D'YSILE</span>
+				</a>
 			</span>
 			<nav class="footer__links">
 				<ul class="footer__links-list">

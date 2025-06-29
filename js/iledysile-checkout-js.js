@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
     }, 600); // Retardo en ms para asegurarnos de que la página cargue correctamente
 });
 
+// Función para cambiar el texto del label del campo de dirección de envío
 document.addEventListener("DOMContentLoaded", function() {
     const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
