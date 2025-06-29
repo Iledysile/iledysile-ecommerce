@@ -124,7 +124,6 @@ body {
     .iledysile-hero-image-mobile {
         display: block;        
     }
-
     .iledysile-hero-image-mobile img {
         object-position:18% 50% !important;
     }
@@ -133,6 +132,17 @@ body {
         bottom: 381px;
         left: -29px;
         transform-origin: bottom left;
+    }
+    .iledysile-square-menu-logo {
+        position: fixed;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .iledysile-square-menu-logo.hidden {
+        transform: translateY(-100%);
+        transform: rotate(90deg); /* se mantiene */
+        opacity: 0;
+        pointer-events: none;
     }
 }
 

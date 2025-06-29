@@ -31,3 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.setItem('currentHero', '1');
   }
 });
+
+// Oculta el logo del menú al hacer scroll hacia abajo y lo muestra al hacer scroll hacia arriba
+jQuery(function($) {
+    const $logo = $('.iledysile-square-menu-logo');
+
+    $(window).on('scroll', function() {
+        const scrollTop = $(this).scrollTop();
+
+        if (scrollTop > 20) {
+            $logo.addClass('hidden');
+        } else if (scrollTop === 0) {
+            $logo.removeClass('hidden');
+        }
+    });
+});

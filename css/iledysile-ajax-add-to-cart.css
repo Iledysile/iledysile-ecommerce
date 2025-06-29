@@ -121,15 +121,18 @@
 }
 
 .iledysile-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     border: 2px solid #43454b;
     background-color: #e5e5e5;
     width: 52%;
     text-align: center;
     height: 60px;
-    align-content: center;
     transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
 }
+
 
 .iledysile-link:hover {
     background-color: #F1DEFC;
