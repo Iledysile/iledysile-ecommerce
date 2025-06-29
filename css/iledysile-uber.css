@@ -203,6 +203,10 @@
     .iledysile-img-rahel {
         min-height: 62vh !important;
     }
+    .iledysile-imgvid img {
+        object-position: 36% 50% !important;
+    }
+
 }
 
 /*---------------------------------------*/
