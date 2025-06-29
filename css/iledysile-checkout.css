@@ -105,6 +105,15 @@ body:not(.home) .site-content {
     height: auto;
 }
 
+.custom-delivery-time-message {
+    display: block; 
+    color: rgb(145 145 145);
+    text-transform: none;
+    margin-bottom: 1%;
+    font-size: 0.75rem;
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .iledysile-square-menu-logo {
         position: absolute;

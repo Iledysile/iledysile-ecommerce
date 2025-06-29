@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let label = document.querySelector('label[for="shipping-address_1"]');
                 
                 if (label) {
-                    label.textContent = 'Addresse / Hausenummer';
+                    label.textContent = 'Adresse / Hausenummer';
                     observer.disconnect(); // Detenemos la observación una vez que el cambio ha sido realizado
                 }
             }
@@ -28,3 +28,35 @@ document.addEventListener("DOMContentLoaded", function() {
     // Iniciar el observer para observar cambios en el body
     observer.observe(document.body, { childList: true, subtree: true });
 });
+
+// Función para añadir un mensaje de tiempo de entrega en la sección de envío del checkout
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new MutationObserver(function () {
+    const items = document.querySelectorAll(".wc-block-components-totals-item");
+
+    items.forEach(function (item) {
+      const value = item.querySelector(".wc-block-components-totals-item__value");
+      const shippingVia = item.querySelector(".wc-block-components-totals-shipping__via");
+
+      if (
+        shippingVia &&  // Si existe esta clase, es envío
+        value &&
+        !item.querySelector(".custom-delivery-time-message")
+      ) {
+        const message = document.createElement("div");
+        message.className = "custom-delivery-time-message";
+        message.textContent = "Die Lieferung kann zwischen 7 und 21 Tagen dauern";
+        message.style.fontSize = "0.85rem";
+        message.style.color = "#666";
+
+        value.insertAdjacentElement("afterend", message);
+        observer.disconnect();
+      }
+    });
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+
+
+
