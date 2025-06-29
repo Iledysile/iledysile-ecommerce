@@ -85,7 +85,16 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 }
 
 @media (max-width: 768px) {
-    
+    .wp-block-heading {
+        font-size: 2em;
+        padding-top: 1.5em;
+    }
+    .hentry .entry-content .wp-block-columns .wp-block-column, .editor-styles-wrapper .wp-block-columns .wp-block-column {
+        margin-bottom: 0 !important;
+    }
+    :root :where(.is-layout-flex) {
+        gap: 0px !important;
+    }
 }
 
 /*---------------------------------------*/
