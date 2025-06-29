@@ -6,13 +6,7 @@ function storefront_child_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'storefront_child_enqueue_styles' );
 
 add_filter('show_admin_bar', '__return_false');
-add_action('woocommerce_add_to_cart' , 'set_country_befor_cart_page'); 
 
-function set_country_befor_cart_page(){
-
-    WC()->customer->set_billing_country('CH');
-    WC()->customer->set_shipping_country('CH');
-}
 // Incluir los archivos personalizados del tema hijo
 require_once get_stylesheet_directory() . '/inc/iledysile-enqueue-scripts.php';
 require_once get_stylesheet_directory() . '/inc/iledysile-enqueue-styles.php';
@@ -24,4 +18,5 @@ require_once get_stylesheet_directory() . '/inc/iledysile-product-functions.php'
 require_once get_stylesheet_directory() . '/inc/iledysile-woocommerce-image-sizes.php';
 require_once get_stylesheet_directory() . '/inc/iledysile-ajax-add-to-cart.php';
 require_once get_stylesheet_directory() . '/inc/iledysile-ajax-remove-from-cart.php';
+require_once get_stylesheet_directory() . '/inc/iledysile-checkout-funtions.php';
 
