@@ -46,6 +46,7 @@
     transform: rotate(90deg); /* Rota el logo 90 grados */
     transform-origin: left top; /* Hace que la rotación ocurra desde la esquina superior izquierda */
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+	z-index: 1;
 }
 
 .iledysile-logo {

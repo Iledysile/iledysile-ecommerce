@@ -39,7 +39,7 @@ jQuery(function($) {
     $(window).on('scroll', function() {
         const scrollTop = $(this).scrollTop();
 
-        if (scrollTop > 20) {
+        if (scrollTop > 150) {
             $logo.addClass('hidden');
         } else if (scrollTop === 0) {
             $logo.removeClass('hidden');
