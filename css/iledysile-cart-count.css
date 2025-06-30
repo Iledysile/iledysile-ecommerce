@@ -14,9 +14,11 @@
 }
 
 .iledysile-square-cart-button-empty {
-	position: absolute;
-    width: 22px;
-    height: 22px;
+	position: fixed;
+    top: 18px;
+    right: 25px;
+    width: 21px;
+    height: 21px;
 	transition: 0.5s ease;
     border: 1px solid #fe5047;
 }
