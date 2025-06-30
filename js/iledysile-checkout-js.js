@@ -29,32 +29,27 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(document.body, { childList: true, subtree: true });
 });
 
-// Función para añadir un mensaje de tiempo de entrega en la sección de envío del checkout
+// Función para añadir un mensaje personalizado en el bloque de Totales de Entrega
 document.addEventListener("DOMContentLoaded", function () {
-  const observer = new MutationObserver(function () {
-    const items = document.querySelectorAll(".wc-block-components-totals-item");
+  const observer = new MutationObserver(function (mutations, obs) {
+    // Seleccionamos el contenedor personalizado
+    const deliveryWrapper = document.querySelector(".iledysile-delivery");
 
-    items.forEach(function (item) {
-      const value = item.querySelector(".wc-block-components-totals-item__value");
+    if (deliveryWrapper) {
+      const totalsItem = deliveryWrapper.querySelector(".wc-block-components-totals-item");
+      if (totalsItem && !totalsItem.querySelector(".custom-delivery-time-message")) {
+        const valueDiv = totalsItem.querySelector(".wc-block-components-totals-item__value");
+        if (valueDiv) {
+          const messageDiv = document.createElement("div");
+          messageDiv.className = "custom-delivery-time-message";
+          messageDiv.textContent = "Die Lieferung kann zwischen 7 und 21 Tagen dauern";
 
-      if (
-        value &&
-        !item.querySelector(".custom-delivery-time-message")
-      ) {
-        const message = document.createElement("div");
-        message.className = "custom-delivery-time-message";
-        message.textContent = "Die Lieferung kann zwischen 7 und 21 Tagen dauern";
-        message.style.fontSize = "0.85rem";
-        message.style.color = "#666";
-
-        value.insertAdjacentElement("afterend", message);
-        observer.disconnect();
+          valueDiv.insertAdjacentElement("afterend", messageDiv);
+          obs.disconnect();
+        }
       }
-    });
+    }
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
 });
-
-
-
