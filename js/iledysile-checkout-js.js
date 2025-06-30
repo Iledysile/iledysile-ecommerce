@@ -36,10 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     items.forEach(function (item) {
       const value = item.querySelector(".wc-block-components-totals-item__value");
-      const shippingVia = item.querySelector(".wc-block-components-totals-shipping__via");
 
       if (
-        shippingVia &&  // Si existe esta clase, es envío
         value &&
         !item.querySelector(".custom-delivery-time-message")
       ) {
