@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (valueDiv) {
           const messageDiv = document.createElement("div");
           messageDiv.className = "custom-delivery-time-message";
-          messageDiv.textContent = "Die Lieferung kann zwischen 7 und 21 Tagen dauern";
+          messageDiv.textContent = "Lieferung zwischen 7 und 21 Tagen";
 
           valueDiv.insertAdjacentElement("afterend", messageDiv);
           obs.disconnect();
