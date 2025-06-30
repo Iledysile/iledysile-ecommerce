@@ -13,6 +13,14 @@
     right: 25px;
 }
 
+.iledysile-square-cart-button-empty {
+	position: absolute;
+    width: 22px;
+    height: 22px;
+	transition: 0.5s ease;
+    border: 1px solid #fe5047;
+}
+
 .iledysile-cart-count {
     display: flex;
     justify-content: center;
