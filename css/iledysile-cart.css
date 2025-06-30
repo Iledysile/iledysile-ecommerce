@@ -167,4 +167,7 @@ span.wc-block-components-button__text {
     .is-mobile.wc-block-components-sidebar-layout {
         margin-bottom: 0px !important;
     }
+    .iledysile-cart-empty-p {
+        padding-left: 0;
+    }
 }
