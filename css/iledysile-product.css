@@ -261,11 +261,10 @@ button.iledysile_add_cart:hover {
     .storefront-full-width-content.single-product div.product .summary {
         width: 50% !important;
         opacity: 1 !important;
-    }
-
-    .storefront-full-width-content.single-product div.product .summary {
+        margin-bottom: 0px !important;
         padding-top: 3%;
         padding-left: 10%;
+        padding-right: 9%;
     }
 
     .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
@@ -279,11 +278,6 @@ button.iledysile_add_cart:hover {
     .single-product div.product .woocommerce-product-gallery .flex-viewport {
         margin-bottom: 0px !important;
     }
-
-    .storefront-full-width-content.single-product div.product .summary {
-        margin-bottom: 0px !important;
-    }
-    
 }
 
 @media (max-width: 768px) {
