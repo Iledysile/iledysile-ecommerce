@@ -2,6 +2,7 @@
 // Add custom SEO text to the shop page
 add_action('woocommerce_after_main_content', 'custom_shop_seo_text', 5);
 function custom_shop_seo_text() {
+    if ( is_shop() && ! is_product() ) {
     ?>
     <section class="iledysile-shop-seo-text">
         <h1>Handgemachte Lingerie aus der Schweiz - Echt. Fein. Frei.</h1>
@@ -12,4 +13,5 @@ function custom_shop_seo_text() {
         <p>Willkommen bei Île d'Ysile - handgemachte Lingerie aus der Schweiz, die Qualität und Werte verbindet.</p>
     </section>
     <?php
+    }
 }
