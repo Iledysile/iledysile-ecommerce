@@ -19,4 +19,5 @@ require_once get_stylesheet_directory() . '/inc/iledysile-woocommerce-image-size
 require_once get_stylesheet_directory() . '/inc/iledysile-ajax-add-to-cart.php';
 require_once get_stylesheet_directory() . '/inc/iledysile-ajax-remove-from-cart.php';
 require_once get_stylesheet_directory() . '/inc/iledysile-checkout-funtions.php';
-
+require_once get_stylesheet_directory() . '/inc/iledysile-shop-functions.php';
+require_once get_stylesheet_directory() . '/inc/iledysile-seo-meta.php';

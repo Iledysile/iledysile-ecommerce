@@ -102,6 +102,29 @@ a:focus, input:focus, textarea:focus, button:focus {
     display: none;
 }
 
+.iledysile-shop-seo-text {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    color: #9f9f9f;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.iledysile-shop-seo-text h1 {
+    font-size: 2em;
+    color: #636363;
+    margin-bottom: 3rem;
+}
+.iledysile-shop-seo-text h2 {
+    font-size: 1.3em;
+    color: #797979;
+}
+.iledysile-shop-seo-text p {
+    font-size: 1.3em;
+    color: #797979;
+    font-weight: 300;
+}
+
 @media (min-width: 769px) {
     .storefront-primary-navigation {
         border-bottom: 1px solid #80808026;
