@@ -26,7 +26,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
 <p><?php printf( esc_html__( 'Hallo %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
-<p><?php esc_html_e( 'Wir haben deine Bestellung abgeschlossen und bereits mit Die Post versendet.', 'woocommerce' ); ?></p>
+<p><?php esc_html_e( 'Wir haben deine Bestellung abgeschlossen und bereits mit der Schweizerische Post versendet. Dein Produkt erreicht dich in den nächsten Tagen.', 'woocommerce' ); ?></p>
 <?php
 
 /*
