@@ -14,13 +14,3 @@ function custom_thankyou_text( $thank_you_text, $order ) {
     // Versión tuteo del texto original:
     return 'Vielen Dank. Deine Bestellung ist eingegangen.';
 }
-
-// Función para cambiar el título de la dirección de facturación en la página de detalles del pedidoq
-add_filter( 'woocommerce_order_details_address_title', 'customize_address_titles_dash', 10, 2 );
-function customize_address_titles_dash( $title, $type ) {
-    if ( $type === 'billing' ) {
-        return 'Rechnungs-adresse';
-    }
-    return $title;
-}
-

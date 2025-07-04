@@ -160,4 +160,7 @@ body:not(.home) .site-content {
     address {
         font-size: 0.9rem !important;
     }
+    h2.woocommerce-column__title {
+        font-size: 1.7rem !important;
+    }
 }
