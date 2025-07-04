@@ -148,4 +148,16 @@ body:not(.home) .site-content {
         margin-top: 5%;
         margin-bottom: 3%;
     }
+    ul.order_details {
+        margin-top: 2em !important;
+    }
+    .woocommerce-order {
+        margin-top: 2em !important;
+    }
+    .woocommerce-table--order-details {
+        font-size: 0.9rem !important;
+    }
+    address {
+        font-size: 0.9rem !important;
+    }
 }

@@ -8,8 +8,19 @@ function set_country_befor_cart_page(){
     WC()->customer->set_shipping_country('CH');
 }
 
+// Función para cambiar al finalizar pedido el texto de agradecimiento
 add_filter( 'woocommerce_thankyou_order_received_text', 'custom_thankyou_text', 10, 2 );
 function custom_thankyou_text( $thank_you_text, $order ) {
     // Versión tuteo del texto original:
     return 'Vielen Dank. Deine Bestellung ist eingegangen.';
 }
+
+// Función para cambiar el título de la dirección de facturación en la página de detalles del pedidoq
+add_filter( 'woocommerce_order_details_address_title', 'customize_address_titles_dash', 10, 2 );
+function customize_address_titles_dash( $title, $type ) {
+    if ( $type === 'billing' ) {
+        return 'Rechnungs-adresse';
+    }
+    return $title;
+}
+
