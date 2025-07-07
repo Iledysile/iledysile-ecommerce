@@ -19,3 +19,8 @@ function iledysile_add_google_fonts() {
     );
 }
 add_action('wp_enqueue_scripts', 'iledysile_add_google_fonts');
+
+// Desactivar las comillas tipográficas automáticas en contenido, título y extracto
+remove_filter('the_content', 'wptexturize');
+remove_filter('the_title', 'wptexturize');
+remove_filter('the_excerpt', 'wptexturize');
