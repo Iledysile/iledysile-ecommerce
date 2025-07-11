@@ -2,8 +2,9 @@
 
 // Función para agregar al carrito con AJAX
 jQuery(function($) {
-    // Ocultarlo después de X segundos
-    var hideTimeout = 10000;
+    var hideWindowTimeout = 20000;
+    var hideMessageTimeout = 30000;
+    var timeoutId;
 
     $('.ajax_add_to_cart').on('click', function(e) {
         e.preventDefault();
@@ -11,17 +12,38 @@ jQuery(function($) {
         var $button = $(this);
         var product_id = $button.data('product_id');
 
-        // Obtener la talla seleccionada
-        var size = $('select[name="attribute_pa_slug_size"]').val();
+        var $sizeSelect = $('select[name="attribute_pa_slug_size"]');
+        var size = $sizeSelect.val();
+        var $tdValue = $sizeSelect.closest('td.value');
+
+        // Si no hay talla seleccionada
         if (!size) {
-            alert('Por favor, selecciona una talla.');
+            // Si no existe el mensaje aún, lo agregamos debajo del td.value
+            if ($tdValue.next('.size-warning').length === 0) {
+                $tdValue.after('<tr class="size-warning"><td colspan="2" style="color: rgb(176, 0, 32);">Bitte wähle eine Grösse aus</td></tr>');
+            }
+
+            // Mostrar el mensaje
+            $('.size-warning').show();
+
+            // Limpiar cualquier timeout anterior
+            clearTimeout(timeoutId);
+
+            // Ocultar mensaje después de hideTimeout
+            timeoutId = setTimeout(function() {
+                $('.size-warning').fadeOut();
+            }, hideMessageTimeout);
+
             return;
         }
 
-        // Obtener la cantidad seleccionada
+        // Si hay mensaje visible y ya eligieron talla, ocultarlo
+        $('.size-warning').fadeOut();
+
+        // Obtener cantidad
         var quantity = $('input[name="quantity"]').val();
         if (!quantity || quantity < 1) {
-            quantity = 1; // Valor por defecto si está vacío o menor a 1
+            quantity = 1;
         }
 
         $.ajax({
@@ -38,39 +60,37 @@ jQuery(function($) {
             },
             success: function(response) {
                 if (response.success) {
-
                     $button.text('Hinzugefügt ✅').delay(2000).queue(function(next) {
-                        $(this).text('In den Warkenkorb').prop('disabled', false);
+                        $(this).text('In den Warenkorb').prop('disabled', false);
                         next();
                     });
 
-                    // Actualizamos el HTML del div
                     $('.iledysile-container-product-added').html(updateFloatingCartInfo(response.data));
-
-                    // Mostrar el div con animación
                     $('.iledysile-container-product-added').addClass('show');
 
                     setTimeout(function() {
                         $('.iledysile-container-product-added').removeClass('show');
-                    }, hideTimeout);
+                    }, hideWindowTimeout);
 
-                    // Actualizar el contador del carrito
                     $('#iledysile-cart-count').text(response.data.cart_count);
 
-                    // Mostrar u ocultar el botón de carrito
                     if (response.data.cart_count > 0) {
                         $('#iledysile-square-cart-button').show();
                     } else {
                         $('#iledysile-square-cart-button').hide();
                     }
 
-                    // Actualizar el carrito sin recargar la página
                     $(document.body).trigger('wc_fragment_refresh');
                 } else {
                     $button.prop('disabled', false).text('Añadir al carrito');
                 }
             }
         });
+    });
+
+    // Al cambiar la talla, ocultar el mensaje si está visible
+    $('select[name="attribute_pa_slug_size"]').on('change', function() {
+        $('.size-warning').fadeOut();
     });
 });
 
